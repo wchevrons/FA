@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Training vs. Personal Training: Which One Is Right for You? | Fitness Architects</title>
+    <link rel="icon" type="image/png" href="images/logoicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background-color: #f8fafc; line-height: 1.7; }
+        .main-container { max-width: 800px; margin: 40px auto; padding: 0 24px; }
+        .breadcrumb { display: inline-flex; align-items: center; gap: 0.5rem; background-color: #fff; padding: 0.5rem; border-radius: 12px; font-size: 0.9rem; margin-bottom: 2rem; border: 1px solid #e5e7eb; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .breadcrumb a { text-decoration: none; font-weight: 500; padding: 0.5rem 1rem; border-radius: 8px; transition: all 0.2s; color: #374151; }
+        .breadcrumb a:hover { background-color: #f3f4f6; color: #1f2937; }
+        .breadcrumb .separator { color: #d1d5db; }
+        .blog-post { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.12); margin-bottom: 3rem; }
+        .blog-header { position: relative; height: 400px; overflow: hidden; }
+        .blog-header img { width: 100%; height: 100%; object-fit: cover; }
+        .blog-header-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 3rem 2rem 2rem; color: white; }
+        .blog-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; font-size: 0.9rem; }
+        .blog-category { background: var(--secondary-color); color: white; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.8rem; }
+        .blog-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
+        .blog-content { padding: 3rem 2rem; }
+        .blog-content h2 { font-size: 1.8rem; font-weight: 700; color: #1f2937; margin: 2rem 0 1rem; }
+        .blog-content h3 { font-size: 1.4rem; font-weight: 600; color: #1f2937; margin: 1.5rem 0 0.75rem; }
+        .blog-content p { margin-bottom: 1.5rem; color: #4b5563; font-size: 1.1rem; }
+        .blog-content ul, .blog-content ol { margin: 1.5rem 0; padding-left: 2rem; }
+        .blog-content li { margin-bottom: 0.5rem; color: #4b5563; }
+        .ai-summary-section { background: #f0fdf4; border: 2px solid var(--secondary-color); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+        .ai-summary-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+        .ai-summary-header i { font-size: 1.5rem; color: var(--secondary-color); }
+        .ai-summary-title { font-size: 1.3rem; font-weight: 700; color: #1f2937; }
+        .ai-summary-content { background: white; padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--secondary-color); display: none; }
+        .ai-summary-content.show { display: block; animation: fadeIn 0.5s ease-in; }
+        .ai-summary-btn { background: var(--secondary-color); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .ai-summary-btn:hover { background: #65a30d; transform: translateY(-2px); }
+        .ai-summary-btn.loading { pointer-events: none; opacity: 0.7; }
+        .ai-summary-btn.loading::after { content: ''; width: 16px; height: 16px; border: 2px solid transparent; border-top: 2px solid white; border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .back-to-blog { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--secondary-color); text-decoration: none; font-weight: 600; padding: 0.75rem 1.5rem; border: 2px solid var(--secondary-color); border-radius: 8px; transition: all 0.3s ease; }
+        .back-to-blog:hover { background: var(--secondary-color); color: white; }
+        @media (max-width: 768px) { .blog-title { font-size: 2rem; } .blog-content { padding: 2rem 1.5rem; } .blog-header { height: 300px; } .blog-header-overlay { padding: 2rem 1.5rem 1.5rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="top-bar-container">
+                <div class="top-bar-left">
+                    <span>Make your life better. Call us <a href="tel:+971505789033">+971 50 578 9033</a></span>
+                </div>
+                <div class="top-bar-center">
+                    <span>Start your <strong>FITNESS JOURNEY</strong> today!</span>
+                </div>
+                <div class="top-bar-right">
+                    <span>Follow us</span>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <img src="images/logo.png" alt="Fitness Architects Logo" style="height:64px; width:auto; display:block;" />
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trainers.html">Our Trainers</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="fas fa-caret-down" style="font-size:0.9em;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="personal-training.html">Personal Training</a></li>
+                            <li><a href="online-training.html">Online Training</a></li>
+                            <li><a href="nutrition-plans.html">Nutrition Plans</a></li>
+                            <li><a href="group-classes.html">Group Classes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="bmi-calculator.html">BMI Calculator</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="cta-btn">Hire Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="separator">/</span>
+            <a href="blog.html">Blog</a>
+            <span class="separator">/</span>
+            <span class="current-page">Group Training vs. Personal Training</span>
+        </div>
+        
+        <article class="blog-post">
+            <div class="blog-header">
+                <img src="images/group 1.jpg" alt="Group Training vs. Personal Training">
+                <div class="blog-header-overlay">
+                    <div class="blog-meta">
+                        <span class="blog-category">Group Training</span>
+                        <span><i class="far fa-calendar-alt"></i> January 4, 2024</span>
+                        <span><i class="far fa-clock"></i> 14 min read</span>
+                    </div>
+                    <h1 class="blog-title">Group Training vs. Personal Training: Which One Is Right for You?</h1>
+                </div>
+            </div>
+            
+            <div class="blog-content">
+                <p>Can't decide between group classes and personal training? We break down the benefits of each approach to help you choose the training style that best fits your goals and personality.</p>
+                <h2>Understanding Group Training</h2>
+                <p>Group training is a popular choice for many individuals because of its social aspect and the camaraderie it fosters. It's a great option if you enjoy working out with others and want to push yourself in a group setting.</p>
+                <h3>Benefits of Group Training</h3>
+                <ul>
+                    <li><strong>Social Interaction:</strong> Group training provides a social environment that can make exercise more enjoyable and motivating.</li>
+                    <li><strong>Accountability:</strong> Being part of a group can help you stay committed to your fitness goals.</li>
+                    <li><strong>Variety:</strong> Group classes offer a variety of workouts, keeping your routine fresh and preventing boredom.</li>
+                    <li><strong>Cost-Effective:</strong> Group training is often more affordable than personal training.</li>
+                </ul>
+                <h2>Understanding Personal Training</h2>
+                <p>Personal training is a great option if you prefer a more individualized approach or have specific goals that require one-on-one attention.</p>
+                <h3>Benefits of Personal Training</h3>
+                <ul>
+                    <li><strong>Customized Workouts:</strong> Personal trainers can create workouts that are tailored to your specific needs and goals.</li>
+                    <li><strong>Expert Guidance:</strong> Personal trainers provide expert guidance and corrections to ensure proper form and safety.</li>
+                    <li><strong>Accountability:</strong> Personal training provides one-on-one accountability, which can be especially helpful for those who struggle with consistency.</li>
+                    <li><strong>Progress Tracking:</strong> Personal trainers can track your progress and adjust your workouts as needed.</li>
+                </ul>
+                <h2>Which Is Right for You?</h2>
+                <p>Choosing between group training and personal training depends on your personal preferences and goals. If you enjoy working out with others and want variety in your workouts, group training might be the right choice for you. If you prefer a more individualized approach or have specific goals, personal training could be the better option.</p>
+                <p>Remember that the key to achieving your fitness goals is consistency and dedication. Choose the training style that best fits your lifestyle and enjoy the process of reaching your desired outcomes.</p>
+                <div class="ai-summary-section">
+                    <div class="ai-summary-header">
+                        <i class="fas fa-robot"></i>
+                        <h3 class="ai-summary-title">AI Summary</h3>
+                    </div>
+                    <button class="ai-summary-btn" onclick="generateAISummary()">
+                        <i class="fas fa-magic"></i>
+                        Generate AI Summary
+                    </button>
+                    <div class="ai-summary-content" id="aiSummary">
+                        <h4>Key Points Summary:</h4>
+                        <ul>
+                            <li><strong>Group Training:</strong> Social interaction, variety, and cost-effective.</li>
+                            <li><strong>Personal Training:</strong> Customized workouts, expert guidance, and accountability.</li>
+                        </ul>
+                        <p><strong>Bottom Line:</strong> Choose the training style that best fits your lifestyle and enjoy the process of reaching your desired outcomes.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="blog.html" class="back-to-blog">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Blog
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <!-- Footer Top Section -->
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="images/logow.png" alt="Fitness Architects Logo" class="footer-logo">
+                <p class="footer-description">Building stronger bodies and stronger communities through personalized fitness solutions.</p>
+                
+                <div class="footer-social">
+                    <h3 class="social-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-nav">
+                    <li><a href="trainers.html" class="footer-link">Our Trainers</a></li>
+                    <li><a href="services.html" class="footer-link">Services</a></li>
+                    <li><a href="personal-training.html" class="footer-link">Personal Training</a></li>
+                    <li><a href="blog.html" class="footer-link">Blog</a></li>
+                    <li><a href="bmi-calculator.html" class="footer-link">BMI Calculator</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-services">
+                <h3 class="footer-heading">Our Services</h3>
+                <ul class="footer-nav">
+                    <li><a href="personal-training.html" class="footer-link">Personal Training</a></li>
+                    <li><a href="online-training.html" class="footer-link">Online Training</a></li>
+                    <li><a href="nutrition-plans.html" class="footer-link">Nutrition Plans</a></li>
+                    <li><a href="group-classes.html" class="footer-link">Group Classes</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">CrossFit Training</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">Olympics weightlifting</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">fat loss</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">Rehabilitation</a></li>                                     
+                    <li><a href="rehabilitation.html" class="footer-link">Muscle gain</a></li>
+                    <li><a href="rehabilitation.html" class="footer-link">Bodybuilding</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3 class="footer-heading">Contact Info</h3>
+                <ul class="contact-info">
+                    <li class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <span>Dubai, United Arab Emirates</span>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-phone-alt contact-icon"></i>
+                        <a href="tel:+971505789033">+971 509859515 </a>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <a href="mailto:info@fitnessarchitects.ae">fitnessarchitects29@gmail.com </a>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-clock contact-icon"></i>
+                        <div>
+                            <span>Mon - Sat: 6:00 AM - 10:00 PM</span>
+                            <span>Sunday: 8:00 AM - 8:00 PM</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p class="copyright">&copy; <span id="current-year"></span> Fitness Architects. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html" class="legal-link">Privacy Policy</a>
+                    <a href="terms.html" class="legal-link">Terms of Service</a>
+                    <a href="sitemap.html" class="legal-link">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</footer>
+    <script src="main.js"></script>
+    <script>
+        function generateAISummary() {
+            const button = document.querySelector('.ai-summary-btn');
+            const summary = document.getElementById('aiSummary');
+            
+            // Add loading state
+            button.classList.add('loading');
+            button.innerHTML = '<i class="fas fa-spinner"></i> Generating Summary...';
+            
+            // Simulate AI processing time
+            setTimeout(() => {
+                // Remove loading state
+                button.classList.remove('loading');
+                button.innerHTML = '<i class="fas fa-check"></i> Summary Generated';
+                
+                // Show the summary
+                summary.classList.add('show');
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    button.innerHTML = '<i class="fas fa-magic"></i> Generate AI Summary';
+                }, 3000);
+            }, 2000);
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effective Weight Loss Strategies: Science-Backed Methods That Actually Work | Fitness Architects</title>
+    <link rel="icon" type="image/png" href="images/logoicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f8fafc;
+            line-height: 1.7;
+        }
+        .main-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #fff;
+            padding: 0.5rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+            color: #374151;
+        }
+        .breadcrumb a:hover {
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .breadcrumb .separator {
+            color: #d1d5db;
+        }
+        
+        .blog-post {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            margin-bottom: 3rem;
+        }
+        
+        .blog-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .blog-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .blog-header-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 3rem 2rem 2rem;
+            color: white;
+        }
+        
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .blog-category {
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .blog-content {
+            padding: 3rem 2rem;
+        }
+        
+        .blog-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 2rem 0 1rem;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            color: #4b5563;
+            font-size: 1.1rem;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.5rem;
+            color: #4b5563;
+        }
+        
+        .ai-summary-section {
+            background: #f0fdf4;
+            border: 2px solid var(--secondary-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .ai-summary-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .ai-summary-header i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .ai-summary-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        .ai-summary-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary-color);
+            display: none;
+        }
+        
+        .ai-summary-content.show {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        .ai-summary-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .ai-summary-btn:hover {
+            background: #65a30d;
+            transform: translateY(-2px);
+        }
+        
+        .ai-summary-btn.loading {
+            pointer-events: none;
+            opacity: 0.7;
+        }
+        
+        .ai-summary-btn.loading::after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border: 2px solid transparent;
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--secondary-color);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-blog:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+            .blog-content {
+                padding: 2rem 1.5rem;
+            }
+            .blog-header {
+                height: 300px;
+            }
+            .blog-header-overlay {
+                padding: 2rem 1.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="top-bar-container">
+                <div class="top-bar-left">
+                    <span>Make your life better. Call us <a href="tel:+971505789033">+971 50 578 9033</a></span>
+                </div>
+                <div class="top-bar-center">
+                    <span>Start your <strong>FITNESS JOURNEY</strong> today!</span>
+                </div>
+                <div class="top-bar-right">
+                    <span>Follow us</span>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <img src="images/logo.png" alt="Fitness Architects Logo" style="height:64px; width:auto; display:block;" />
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trainers.html">Our Trainers</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="fas fa-caret-down" style="font-size:0.9em;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="personal-training.html">Personal Training</a></li>
+                            <li><a href="online-training.html">Online Training</a></li>
+                            <li><a href="nutrition-plans.html">Nutrition Plans</a></li>
+                            <li><a href="group-classes.html">Group Classes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="bmi-calculator.html">BMI Calculator</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="cta-btn">Hire Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="separator">/</span>
+            <a href="blog.html">Blog</a>
+            <span class="separator">/</span>
+            <span class="current-page">Weight Loss Strategies</span>
+        </div>
+        
+        <article class="blog-post">
+            <div class="blog-header">
+                <img src="images/weight loss.jpg" alt="Weight Loss Strategies">
+                <div class="blog-header-overlay">
+                    <div class="blog-meta">
+                        <span class="blog-category">Weight Loss</span>
+                        <span><i class="far fa-calendar-alt"></i> January 10, 2024</span>
+                        <span><i class="far fa-clock"></i> 12 min read</span>
+                    </div>
+                    <h1 class="blog-title">Effective Weight Loss Strategies: Science-Backed Methods That Actually Work</h1>
+                </div>
+            </div>
+            
+            <div class="blog-content">
+                <p>In a world filled with fad diets, miracle pills, and quick-fix promises, finding effective weight loss strategies can feel overwhelming. The truth is, sustainable weight loss requires a comprehensive approach that combines proper nutrition, regular exercise, and healthy lifestyle habits. This guide will explore evidence-based methods that actually work for long-term weight loss success.</p>
+                
+                <h2>Understanding the Science of Weight Loss</h2>
+                <p>Weight loss fundamentally comes down to creating a caloric deficit—burning more calories than you consume. However, the quality of those calories, the timing of your meals, and your overall lifestyle play crucial roles in determining whether your weight loss is sustainable and healthy.</p>
+                
+                <h3>The Caloric Deficit Principle</h3>
+                <p>To lose weight, you need to create a caloric deficit of 500-1000 calories per day, which typically results in 1-2 pounds of weight loss per week. This moderate approach is more sustainable than extreme calorie restriction.</p>
+                
+                <h2>Nutrition Strategies for Effective Weight Loss</h2>
+                
+                <h3>1. Prioritize Protein</h3>
+                <p>Protein is essential for weight loss because it:</p>
+                <ul>
+                    <li>Increases satiety and reduces hunger</li>
+                    <li>Preserves lean muscle mass during weight loss</li>
+                    <li>Requires more energy to digest (thermic effect)</li>
+                    <li>Helps maintain metabolic rate</li>
+                </ul>
+                
+                <p><strong>Recommended Intake:</strong> 1.6-2.2 grams per kilogram of body weight daily</p>
+                
+                <h3>2. Choose Quality Carbohydrates</h3>
+                <p>Not all carbohydrates are created equal. Focus on:</p>
+                <ul>
+                    <li>Whole grains (quinoa, brown rice, oats)</li>
+                    <li>Fruits and vegetables</li>
+                    <li>Legumes and beans</li>
+                    <li>Limit refined carbohydrates and added sugars</li>
+                </ul>
+                
+                <h3>3. Include Healthy Fats</h3>
+                <p>Healthy fats are crucial for hormone production and satiety. Include:</p>
+                <ul>
+                    <li>Avocados and nuts</li>
+                    <li>Olive oil and coconut oil</li>
+                    <li>Fatty fish (salmon, mackerel)</li>
+                    <li>Seeds (chia, flax, pumpkin)</li>
+                </ul>
+                
+                <h3>4. Practice Portion Control</h3>
+                <p>Even healthy foods can contribute to weight gain if consumed in excess. Use these strategies:</p>
+                <ul>
+                    <li>Use smaller plates and bowls</li>
+                    <li>Measure portions initially to develop awareness</li>
+                    <li>Eat slowly and mindfully</li>
+                    <li>Stop eating when you're 80% full</li>
+                </ul>
+                
+                <h2>Exercise Strategies for Weight Loss</h2>
+                
+                <h3>1. Combine Cardio and Strength Training</h3>
+                <p>The most effective weight loss programs include both cardiovascular exercise and strength training:</p>
+                
+                <p><strong>Cardiovascular Exercise:</strong></p>
+                <ul>
+                    <li>Burns calories during the workout</li>
+                    <li>Improves heart health and endurance</li>
+                    <li>Can be done daily or most days of the week</li>
+                    <li>Examples: walking, running, cycling, swimming</li>
+                </ul>
+                
+                <p><strong>Strength Training:</strong></p>
+                <ul>
+                    <li>Builds lean muscle mass</li>
+                    <li>Increases resting metabolic rate</li>
+                    <li>Improves body composition</li>
+                    <li>Should be done 2-3 times per week</li>
+                </ul>
+                
+                <h3>2. High-Intensity Interval Training (HIIT)</h3>
+                <p>HIIT combines short bursts of intense exercise with periods of rest or lower-intensity exercise. Benefits include:</p>
+                <ul>
+                    <li>Burns more calories in less time</li>
+                    <li>Creates an "afterburn" effect (EPOC)</li>
+                    <li>Improves cardiovascular fitness</li>
+                    <li>Can be done anywhere with minimal equipment</li>
+                </ul>
+                
+                <h3>3. Increase Daily Movement</h3>
+                <p>Non-exercise activity thermogenesis (NEAT) plays a significant role in weight loss:</p>
+                <ul>
+                    <li>Take the stairs instead of the elevator</li>
+                    <li>Walk or bike for short trips</li>
+                    <li>Stand while working when possible</li>
+                    <li>Take regular breaks to move throughout the day</li>
+                </ul>
+                
+                <h2>Lifestyle Factors for Weight Loss Success</h2>
+                
+                <h3>1. Prioritize Sleep</h3>
+                <p>Sleep is crucial for weight loss because it affects:</p>
+                <ul>
+                    <li>Hormone regulation (ghrelin and leptin)</li>
+                    <li>Metabolic rate</li>
+                    <li>Food cravings and appetite</li>
+                    <li>Recovery from exercise</li>
+                </ul>
+                
+                <p><strong>Recommendation:</strong> Aim for 7-9 hours of quality sleep per night</p>
+                
+                <h3>2. Manage Stress</h3>
+                <p>Chronic stress can sabotage weight loss efforts by:</p>
+                <ul>
+                    <li>Increasing cortisol levels</li>
+                    <li>Triggering emotional eating</li>
+                    <li>Disrupting sleep patterns</li>
+                    <li>Reducing motivation for exercise</li>
+                </ul>
+                
+                <p><strong>Stress Management Techniques:</strong></p>
+                <ul>
+                    <li>Meditation and deep breathing</li>
+                    <li>Regular exercise</li>
+                    <li>Time management and prioritization</li>
+                    <li>Seeking support from friends, family, or professionals</li>
+                </ul>
+                
+                <h3>3. Stay Hydrated</h3>
+                <p>Proper hydration supports weight loss by:</p>
+                <ul>
+                    <li>Reducing hunger (thirst is often mistaken for hunger)</li>
+                    <li>Supporting metabolic function</li>
+                    <li>Improving exercise performance</li>
+                    <li>Aiding digestion and nutrient absorption</li>
+                </ul>
+                
+                <p><strong>Recommendation:</strong> Drink 8-10 glasses of water daily, more if exercising</p>
+                
+                <h2>Behavioral Strategies for Long-Term Success</h2>
+                
+                <h3>1. Set SMART Goals</h3>
+                <p>Specific, Measurable, Achievable, Relevant, and Time-bound goals increase your chances of success:</p>
+                <ul>
+                    <li><strong>Specific:</strong> "I will lose 20 pounds" instead of "I want to lose weight"</li>
+                    <li><strong>Measurable:</strong> Track progress with regular weigh-ins and measurements</li>
+                    <li><strong>Achievable:</strong> Set realistic targets (1-2 pounds per week)</li>
+                    <li><strong>Relevant:</strong> Ensure goals align with your values and lifestyle</li>
+                    <li><strong>Time-bound:</strong> Set deadlines for achieving milestones</li>
+                </ul>
+                
+                <h3>2. Track Your Progress</h3>
+                <p>Monitoring your progress helps you stay accountable and make necessary adjustments:</p>
+                <ul>
+                    <li>Regular weigh-ins (weekly, not daily)</li>
+                    <li>Body measurements and progress photos</li>
+                    <li>Food and exercise journals</li>
+                    <li>Fitness tracking apps</li>
+                </ul>
+                
+                <h3>3. Build a Support System</h3>
+                <p>Having support increases your chances of success:</p>
+                <ul>
+                    <li>Work with a personal trainer or nutritionist</li>
+                    <li>Join a weight loss group or online community</li>
+                    <li>Enlist friends and family for accountability</li>
+                    <li>Consider working with a therapist for emotional support</li>
+                </ul>
+                
+                <h2>Common Weight Loss Mistakes to Avoid</h2>
+                
+                <h3>1. Relying on Fad Diets</h3>
+                <p>Fad diets often promise quick results but are rarely sustainable. They can:</p>
+                <ul>
+                    <li>Lead to nutrient deficiencies</li>
+                    <li>Slow down your metabolism</li>
+                    <li>Create an unhealthy relationship with food</li>
+                    <li>Result in weight regain once the diet ends</li>
+                </ul>
+                
+                <h3>2. Skipping Meals</h3>
+                <p>Skipping meals can backfire by:</p>
+                <ul>
+                    <li>Slowing down your metabolism</li>
+                    <li>Leading to overeating later</li>
+                    <li>Reducing energy levels and performance</li>
+                    <li>Making it harder to make healthy food choices</li>
+                </ul>
+                
+                <h3>3. Focusing Only on the Scale</h3>
+                <p>Weight loss isn't just about the number on the scale. Consider:</p>
+                <ul>
+                    <li>Body composition changes</li>
+                    <li>Energy levels and mood</li>
+                    <li>Clothing fit and measurements</li>
+                    <li>Overall health improvements</li>
+                </ul>
+                
+                <h3>4. Expecting Perfection</h3>
+                <p>Perfectionism can derail your progress. Instead:</p>
+                <ul>
+                    <li>Aim for consistency, not perfection</li>
+                    <li>Allow for occasional indulgences</li>
+                    <li>Learn from setbacks without giving up</li>
+                    <li>Focus on progress over perfection</li>
+                </ul>
+                
+                <h2>Creating Your Personalized Weight Loss Plan</h2>
+                
+                <h3>1. Assess Your Current Situation</h3>
+                <p>Before starting any weight loss program, evaluate:</p>
+                <ul>
+                    <li>Your current weight and body composition</li>
+                    <li>Medical history and any health conditions</li>
+                    <li>Current eating and exercise habits</li>
+                    <li>Lifestyle factors (work schedule, family commitments)</li>
+                    <li>Previous weight loss attempts and what worked/didn't work</li>
+                </ul>
+                
+                <h3>2. Set Realistic Expectations</h3>
+                <p>Healthy weight loss typically occurs at 1-2 pounds per week. Factors that affect your rate of loss include:</p>
+                <ul>
+                    <li>Starting weight (higher starting weights may lose faster initially)</li>
+                    <li>Age and gender</li>
+                    <li>Activity level</li>
+                    <li>Metabolic health</li>
+                    <li>Consistency with the program</li>
+                </ul>
+                
+                <h3>3. Plan for Maintenance</h3>
+                <p>Weight loss is only half the battle. Plan for maintenance by:</p>
+                <ul>
+                    <li>Gradually increasing calories to maintenance level</li>
+                    <li>Continuing regular exercise</li>
+                    <li>Maintaining healthy eating habits</li>
+                    <li>Regular monitoring and adjustments</li>
+                </ul>
+                
+                <h2>When to Seek Professional Help</h2>
+                <p>Consider working with professionals if you:</p>
+                <ul>
+                    <li>Have underlying health conditions</li>
+                    <li>Have tried multiple weight loss approaches without success</li>
+                    <li>Struggle with emotional eating or disordered eating patterns</li>
+                    <li>Need personalized guidance and accountability</li>
+                    <li>Want to ensure you're losing weight safely and effectively</li>
+                </ul>
+                
+                <h2>Conclusion</h2>
+                <p>Effective weight loss requires a comprehensive approach that addresses nutrition, exercise, and lifestyle factors. By focusing on evidence-based strategies, setting realistic goals, and building sustainable habits, you can achieve lasting weight loss success.</p>
+                
+                <p>Remember that weight loss is a journey, not a destination. Be patient with yourself, celebrate your progress, and focus on building a healthy lifestyle that you can maintain long-term. With the right approach and support, you can achieve your weight loss goals and improve your overall health and well-being.</p>
+                
+                <div class="ai-summary-section">
+                    <div class="ai-summary-header">
+                        <i class="fas fa-robot"></i>
+                        <h3 class="ai-summary-title">AI Summary</h3>
+                    </div>
+                    <button class="ai-summary-btn" onclick="generateAISummary()">
+                        <i class="fas fa-magic"></i>
+                        Generate AI Summary
+                    </button>
+                    <div class="ai-summary-content" id="aiSummary">
+                        <h4>Key Points Summary:</h4>
+                        <ul>
+                            <li><strong>Caloric Deficit:</strong> Create 500-1000 calorie daily deficit for 1-2 pounds weekly weight loss.</li>
+                            <li><strong>Nutrition:</strong> Prioritize protein (1.6-2.2g/kg), quality carbs, healthy fats, and portion control.</li>
+                            <li><strong>Exercise:</strong> Combine cardio and strength training, include HIIT, increase daily movement (NEAT).</li>
+                            <li><strong>Lifestyle:</strong> Prioritize sleep (7-9 hours), manage stress, stay hydrated, build support systems.</li>
+                            <li><strong>Behavioral:</strong> Set SMART goals, track progress, avoid fad diets and meal skipping.</li>
+                            <li><strong>Common Mistakes:</strong> Relying on fad diets, skipping meals, focusing only on scale, expecting perfection.</li>
+                            <li><strong>Professional Help:</strong> Seek guidance for health conditions, emotional eating, or lack of success.</li>
+                        </ul>
+                        <p><strong>Bottom Line:</strong> Sustainable weight loss requires a comprehensive approach combining proper nutrition, regular exercise, and healthy lifestyle habits. Focus on consistency over perfection and build habits you can maintain long-term.</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="blog.html" class="back-to-blog">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Blog
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+   <footer class="footer">
+    <div class="footer-container">
+        <!-- Footer Top Section -->
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="images/logow.png" alt="Fitness Architects Logo" class="footer-logo">
+                <p class="footer-description">Building stronger bodies and stronger communities through personalized fitness solutions.</p>
+                
+                <div class="footer-social">
+                    <h3 class="social-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-nav">
+                    <li><a href="trainers.html" class="footer-link">Our Trainers</a></li>
+                    <li><a href="services.html" class="footer-link">Services</a></li>
+                    <li><a href="personal-training.html" class="footer-link">Personal Training</a></li>
+                    <li><a href="blog.html" class="footer-link">Blog</a></li>
+                    <li><a href="bmi-calculator.html" class="footer-link">BMI Calculator</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-services">
+                <h3 class="footer-heading">Our Services</h3>
+                <ul class="footer-nav">
+                    <li><a href="personal-training.html" class="footer-link">Personal Training</a></li>
+                    <li><a href="online-training.html" class="footer-link">Online Training</a></li>
+                    <li><a href="nutrition-plans.html" class="footer-link">Nutrition Plans</a></li>
+                    <li><a href="group-classes.html" class="footer-link">Group Classes</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">CrossFit Training</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">Olympics weightlifting</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">fat loss</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">Rehabilitation</a></li>                                     
+                    <li><a href="rehabilitation.html" class="footer-link">Muscle gain</a></li>
+                    <li><a href="rehabilitation.html" class="footer-link">Bodybuilding</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3 class="footer-heading">Contact Info</h3>
+                <ul class="contact-info">
+                    <li class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <span>Dubai, United Arab Emirates</span>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-phone-alt contact-icon"></i>
+                        <a href="tel:+971505789033">+971 509859515 </a>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <a href="mailto:info@fitnessarchitects.ae">fitnessarchitects29@gmail.com </a>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-clock contact-icon"></i>
+                        <div>
+                            <span>Mon - Sat: 6:00 AM - 10:00 PM</span>
+                            <span>Sunday: 8:00 AM - 8:00 PM</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p class="copyright">&copy; <span id="current-year"></span> Fitness Architects. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html" class="legal-link">Privacy Policy</a>
+                    <a href="terms.html" class="legal-link">Terms of Service</a>
+                    <a href="sitemap.html" class="legal-link">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</footer>
+    <script src="main.js"></script>
+    <script>
+        function generateAISummary() {
+            const button = document.querySelector('.ai-summary-btn');
+            const summary = document.getElementById('aiSummary');
+            
+            // Add loading state
+            button.classList.add('loading');
+            button.innerHTML = '<i class="fas fa-spinner"></i> Generating Summary...';
+            
+            // Simulate AI processing time
+            setTimeout(() => {
+                // Remove loading state
+                button.classList.remove('loading');
+                button.innerHTML = '<i class="fas fa-check"></i> Summary Generated';
+                
+                // Show the summary
+                summary.classList.add('show');
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    button.innerHTML = '<i class="fas fa-magic"></i> Generate AI Summary';
+                }, 3000);
+            }, 2000);
+        }
+    </script>
+</body>
+</html> 

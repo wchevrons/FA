@@ -1,0 +1,695 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strength Training 101: Building Muscle and Boosting Metabolism | Fitness Architects</title>
+    <link rel="icon" type="image/png" href="images/logoicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f8fafc;
+            line-height: 1.7;
+        }
+        .main-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #fff;
+            padding: 0.5rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+            color: #374151;
+        }
+        .breadcrumb a:hover {
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .breadcrumb .separator {
+            color: #d1d5db;
+        }
+        
+        .blog-post {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            margin-bottom: 3rem;
+        }
+        
+        .blog-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .blog-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .blog-header-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 3rem 2rem 2rem;
+            color: white;
+        }
+        
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .blog-category {
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .blog-content {
+            padding: 3rem 2rem;
+        }
+        
+        .blog-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 2rem 0 1rem;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            color: #4b5563;
+            font-size: 1.1rem;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.5rem;
+            color: #4b5563;
+        }
+        
+        .ai-summary-section {
+            background: #f0fdf4;
+            border: 2px solid var(--secondary-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .ai-summary-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .ai-summary-header i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .ai-summary-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        .ai-summary-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary-color);
+            display: none;
+        }
+        
+        .ai-summary-content.show {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        .ai-summary-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .ai-summary-btn:hover {
+            background: #65a30d;
+            transform: translateY(-2px);
+        }
+        
+        .ai-summary-btn.loading {
+            pointer-events: none;
+            opacity: 0.7;
+        }
+        
+        .ai-summary-btn.loading::after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border: 2px solid transparent;
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--secondary-color);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-blog:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+            .blog-content {
+                padding: 2rem 1.5rem;
+            }
+            .blog-header {
+                height: 300px;
+            }
+            .blog-header-overlay {
+                padding: 2rem 1.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="top-bar-container">
+                <div class="top-bar-left">
+                    <span>Make your life better. Call us <a href="tel:+971505789033">+971 50 578 9033</a></span>
+                </div>
+                <div class="top-bar-center">
+                    <span>Start your <strong>FITNESS JOURNEY</strong> today!</span>
+                </div>
+                <div class="top-bar-right">
+                    <span>Follow us</span>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <img src="images/logo.png" alt="Fitness Architects Logo" style="height:64px; width:auto; display:block;" />
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trainers.html">Our Trainers</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="fas fa-caret-down" style="font-size:0.9em;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="personal-training.html">Personal Training</a></li>
+                            <li><a href="online-training.html">Online Training</a></li>
+                            <li><a href="nutrition-plans.html">Nutrition Plans</a></li>
+                            <li><a href="group-classes.html">Group Classes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="bmi-calculator.html">BMI Calculator</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="cta-btn">Hire Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="separator">/</span>
+            <a href="blog.html">Blog</a>
+            <span class="separator">/</span>
+            <span class="current-page">Strength Training 101</span>
+        </div>
+        
+        <article class="blog-post">
+            <div class="blog-header">
+                <img src="images/lifting.jpg" alt="Strength Training">
+                <div class="blog-header-overlay">
+                    <div class="blog-meta">
+                        <span class="blog-category">Strength Training</span>
+                        <span><i class="far fa-calendar-alt"></i> January 8, 2024</span>
+                        <span><i class="far fa-clock"></i> 10 min read</span>
+                    </div>
+                    <h1 class="blog-title">Strength Training 101: Building Muscle and Boosting Metabolism</h1>
+                </div>
+            </div>
+            
+            <div class="blog-content">
+                <p>Strength training isn't just for bodybuilders or athletes—it's a fundamental component of any comprehensive fitness program. Whether your goal is to build muscle, lose weight, improve athletic performance, or simply enhance your overall health, understanding the basics of strength training is essential for achieving sustainable results.</p>
+                
+                <h2>What is Strength Training?</h2>
+                <p>Strength training, also known as resistance training, involves exercises that make your muscles work against a force or weight. This can include free weights, machines, resistance bands, or even your own body weight. The primary goal is to increase muscle strength, size, and endurance.</p>
+                
+                <h3>Key Benefits of Strength Training</h3>
+                <ul>
+                    <li><strong>Increased Muscle Mass:</strong> Builds lean muscle tissue</li>
+                    <li><strong>Boosted Metabolism:</strong> Muscle tissue burns more calories at rest</li>
+                    <li><strong>Improved Bone Density:</strong> Reduces risk of osteoporosis</li>
+                    <li><strong>Enhanced Functional Strength:</strong> Better performance in daily activities</li>
+                    <li><strong>Injury Prevention:</strong> Stronger muscles protect joints and bones</li>
+                    <li><strong>Better Body Composition:</strong> Reduces body fat and increases muscle</li>
+                </ul>
+                
+                <h2>Fundamental Principles of Strength Training</h2>
+                <p>Understanding these core principles will help you design effective strength training programs and avoid common mistakes.</p>
+                
+                <h3>1. Progressive Overload</h3>
+                <p>Progressive overload is the foundation of strength training. It means gradually increasing the demands on your muscles over time to continue making progress.</p>
+                <ul>
+                    <li><strong>Increase Weight:</strong> Gradually add more resistance</li>
+                    <li><strong>Increase Volume:</strong> Add more sets or repetitions</li>
+                    <li><strong>Increase Frequency:</strong> Train more often</li>
+                    <li><strong>Improve Technique:</strong> Better form allows for more effective training</li>
+                </ul>
+                
+                <h3>2. Exercise Selection</h3>
+                <p>Choose exercises that effectively target the muscle groups you want to develop:</p>
+                <ul>
+                    <li><strong>Compound Movements:</strong> Multi-joint exercises that work multiple muscle groups</li>
+                    <li><strong>Isolation Exercises:</strong> Single-joint movements that target specific muscles</li>
+                    <li><strong>Functional Movements:</strong> Exercises that mimic real-life activities</li>
+                    <li><strong>Variety:</strong> Include different types of resistance and movement patterns</li>
+                </ul>
+                
+                <h3>3. Training Frequency and Volume</h3>
+                <p>How often and how much you train significantly impacts your results:</p>
+                <ul>
+                    <li><strong>Frequency:</strong> 2-4 times per week per muscle group</li>
+                    <li><strong>Volume:</strong> 10-20 sets per muscle group per week</li>
+                    <li><strong>Intensity:</strong> 70-85% of one-rep max for most sets</li>
+                    <li><strong>Rest Periods:</strong> 2-5 minutes between sets for compound movements</li>
+                </ul>
+                
+                <h2>Essential Strength Training Exercises</h2>
+                <p>These fundamental exercises should form the foundation of any strength training program.</p>
+                
+                <h3>Compound Movements</h3>
+                <ul>
+                    <li><strong>Squats:</strong> The king of leg exercises, targeting quads, hamstrings, and glutes</li>
+                    <li><strong>Deadlifts:</strong> Full-body exercise that builds posterior chain strength</li>
+                    <li><strong>Bench Press:</strong> Primary pushing movement for chest, shoulders, and triceps</li>
+                    <li><strong>Overhead Press:</strong> Vertical pushing movement for shoulders and triceps</li>
+                    <li><strong>Rows:</strong> Horizontal pulling movement for back and biceps</li>
+                    <li><strong>Pull-ups/Chin-ups:</strong> Vertical pulling movement for back and biceps</li>
+                </ul>
+                
+                <h3>Isolation Exercises</h3>
+                <ul>
+                    <li><strong>Bicep Curls:</strong> Isolate and develop bicep muscles</li>
+                    <li><strong>Tricep Extensions:</strong> Target tricep development</li>
+                    <li><strong>Lateral Raises:</strong> Isolate shoulder muscles</li>
+                    <li><strong>Leg Extensions:</strong> Focus on quadriceps</li>
+                    <li><strong>Leg Curls:</strong> Target hamstring development</li>
+                    <li><strong>Calf Raises:</strong> Develop lower leg strength</li>
+                </ul>
+                
+                <h2>Creating Your Strength Training Program</h2>
+                <p>Designing an effective strength training program requires careful planning and consideration of your goals, experience level, and available time.</p>
+                
+                <h3>1. Determine Your Goals</h3>
+                <p>Your training program should align with your specific objectives:</p>
+                <ul>
+                    <li><strong>Muscle Building:</strong> Higher volume, moderate to high intensity</li>
+                    <li><strong>Strength Development:</strong> Lower volume, higher intensity</li>
+                    <li><strong>Endurance:</strong> Higher volume, lower intensity</li>
+                    <li><strong>General Fitness:</strong> Balanced approach with variety</li>
+                </ul>
+                
+                <h3>2. Choose Your Split</h3>
+                <p>Different training splits work for different schedules and goals:</p>
+                <ul>
+                    <li><strong>Full Body:</strong> Train all major muscle groups each session</li>
+                    <li><strong>Upper/Lower:</strong> Alternate between upper and lower body</li>
+                    <li><strong>Push/Pull/Legs:</strong> Separate pushing, pulling, and leg movements</li>
+                    <li><strong>Body Part Split:</strong> Focus on specific muscle groups each day</li>
+                </ul>
+                
+                <h3>3. Set Rep Ranges</h3>
+                <p>Different rep ranges target different aspects of fitness:</p>
+                <ul>
+                    <li><strong>1-5 reps:</strong> Maximum strength and neural efficiency</li>
+                    <li><strong>6-12 reps:</strong> Muscle hypertrophy (growth)</li>
+                    <li><strong>12-20 reps:</strong> Muscular endurance</li>
+                    <li><strong>20+ reps:</strong> Endurance and conditioning</li>
+                </ul>
+                
+                <h2>Nutrition for Strength Training</h2>
+                <p>Proper nutrition is essential for supporting your strength training efforts and maximizing results.</p>
+                
+                <h3>1. Protein Requirements</h3>
+                <p>Protein is crucial for muscle repair and growth:</p>
+                <ul>
+                    <li><strong>Daily Intake:</strong> 1.6-2.2 grams per kilogram of body weight</li>
+                    <li><strong>Distribution:</strong> Spread protein intake throughout the day</li>
+                    <li><strong>Timing:</strong> Consume protein within 2 hours of training</li>
+                    <li><strong>Quality Sources:</strong> Lean meats, fish, eggs, dairy, legumes</li>
+                </ul>
+                
+                <h3>2. Carbohydrates for Energy</h3>
+                <p>Carbohydrates provide the energy needed for intense training:</p>
+                <ul>
+                    <li><strong>Pre-Workout:</strong> 30-60 grams 1-2 hours before training</li>
+                    <li><strong>Post-Workout:</strong> 30-60 grams within 30 minutes after training</li>
+                    <li><strong>Daily Intake:</strong> 3-7 grams per kilogram of body weight</li>
+                    <li><strong>Quality Sources:</strong> Whole grains, fruits, vegetables, legumes</li>
+                </ul>
+                
+                <h3>3. Healthy Fats</h3>
+                <p>Fats support hormone production and overall health:</p>
+                <ul>
+                    <li><strong>Daily Intake:</strong> 20-35% of total calories</li>
+                    <li><strong>Essential Fats:</strong> Omega-3 and omega-6 fatty acids</li>
+                    <li><strong>Sources:</strong> Avocados, nuts, seeds, olive oil, fatty fish</li>
+                </ul>
+                
+                <h2>Recovery and Rest</h2>
+                <p>Recovery is just as important as training for building strength and muscle.</p>
+                
+                <h3>1. Sleep Quality</h3>
+                <p>Sleep is crucial for muscle growth and recovery:</p>
+                <ul>
+                    <li><strong>Duration:</strong> 7-9 hours per night</li>
+                    <li><strong>Quality:</strong> Deep, uninterrupted sleep</li>
+                    <li><strong>Hormone Production:</strong> Growth hormone is released during sleep</li>
+                    <li><strong>Recovery:</strong> Muscles repair and grow during sleep</li>
+                </ul>
+                
+                <h3>2. Rest Days</h3>
+                <p>Rest days allow your body to recover and adapt:</p>
+                <ul>
+                    <li><strong>Frequency:</strong> 1-2 rest days per week</li>
+                    <li><strong>Active Recovery:</strong> Light activity on rest days</li>
+                    <li><strong>Listen to Your Body:</strong> Take extra rest when needed</li>
+                </ul>
+                
+                <h3>3. Stress Management</h3>
+                <p>Chronic stress can interfere with muscle growth:</p>
+                <ul>
+                    <li><strong>Relaxation Techniques:</strong> Meditation, deep breathing, yoga</li>
+                    <li><strong>Time Management:</strong> Reduce unnecessary stress</li>
+                    <li><strong>Social Support:</strong> Maintain positive relationships</li>
+                </ul>
+                
+                <h2>Common Strength Training Mistakes</h2>
+                <p>Understanding common pitfalls can help you avoid setbacks and maximize your progress.</p>
+                
+                <h3>1. Poor Form</h3>
+                <p>Using improper form reduces effectiveness and increases injury risk:</p>
+                <ul>
+                    <li>Learn proper technique before adding weight</li>
+                    <li>Focus on quality over quantity</li>
+                    <li>Consider working with a qualified trainer</li>
+                    <li>Record yourself to check form</li>
+                </ul>
+                
+                <h3>2. Inconsistent Training</h3>
+                <p>Strength building requires consistent effort over time:</p>
+                <ul>
+                    <li>Stick to a regular training schedule</li>
+                    <li>Don't skip sessions without good reason</li>
+                    <li>Track your progress to stay motivated</li>
+                    <li>Set realistic expectations for progress</li>
+                </ul>
+                
+                <h3>3. Neglecting Recovery</h3>
+                <p>Overtraining without adequate rest can lead to plateaus and injury:</p>
+                <ul>
+                    <li>Include rest days in your program</li>
+                    <li>Get adequate sleep</li>
+                    <li>Manage stress levels</li>
+                    <li>Listen to your body's signals</li>
+                </ul>
+                
+                <h2>Progressive Overload Strategies</h2>
+                <p>Implementing progressive overload is essential for continued progress in strength training.</p>
+                
+                <h3>1. Weight Progression</h3>
+                <ul>
+                    <li>Gradually increase resistance when you can complete all sets</li>
+                    <li>Use small increments (2.5-5 pounds for upper body, 5-10 pounds for lower body)</li>
+                    <li>Maintain proper form when increasing weight</li>
+                    <li>Don't rush progression—quality over quantity</li>
+                </ul>
+                
+                <h3>2. Volume Progression</h3>
+                <ul>
+                    <li>Add sets or repetitions to increase volume</li>
+                    <li>Increase training frequency</li>
+                    <li>Add exercises to target specific areas</li>
+                    <li>Monitor recovery to avoid overtraining</li>
+                </ul>
+                
+                <h3>3. Technique Progression</h3>
+                <ul>
+                    <li>Improve exercise form and efficiency</li>
+                    <li>Learn more advanced variations</li>
+                    <li>Increase range of motion</li>
+                    <li>Reduce rest periods between sets</li>
+                </ul>
+                
+                <h2>Conclusion</h2>
+                <p>Strength training is a powerful tool for improving your health, fitness, and quality of life. By understanding the fundamental principles, choosing appropriate exercises, and implementing progressive overload, you can build strength, increase muscle mass, and boost your metabolism.</p>
+                
+                <p>Remember that strength training is a journey, not a destination. Focus on consistency, proper form, and gradual progression. Whether you're a beginner or an experienced lifter, there's always room for improvement and growth.</p>
+                
+                <p>Start with the basics, be patient with your progress, and enjoy the process of becoming stronger. The benefits of strength training extend far beyond the gym, improving your daily life and overall well-being.</p>
+                
+                <div class="ai-summary-section">
+                    <div class="ai-summary-header">
+                        <i class="fas fa-robot"></i>
+                        <h3 class="ai-summary-title">AI Summary</h3>
+                    </div>
+                    <button class="ai-summary-btn" onclick="generateAISummary()">
+                        <i class="fas fa-magic"></i>
+                        Generate AI Summary
+                    </button>
+                    <div class="ai-summary-content" id="aiSummary">
+                        <h4>Key Points Summary:</h4>
+                        <ul>
+                            <li><strong>Strength Training Definition:</strong> Resistance exercises that make muscles work against force to increase strength, size, and endurance.</li>
+                            <li><strong>Key Benefits:</strong> Increased muscle mass, boosted metabolism, improved bone density, enhanced functional strength, injury prevention, better body composition.</li>
+                            <li><strong>Fundamental Principles:</strong> Progressive overload (gradually increase demands), proper exercise selection (compound + isolation), training frequency (2-4x/week per muscle group).</li>
+                            <li><strong>Essential Exercises:</strong> Compound movements (squats, deadlifts, bench press, overhead press, rows, pull-ups) and isolation exercises (curls, extensions, raises).</li>
+                            <li><strong>Program Design:</strong> Align with goals (muscle building, strength, endurance), choose appropriate split (full body, upper/lower, push/pull/legs), set rep ranges (1-5 for strength, 6-12 for hypertrophy).</li>
+                            <li><strong>Nutrition Support:</strong> Protein (1.6-2.2g/kg), carbs (3-7g/kg), healthy fats (20-35% calories), proper timing around workouts.</li>
+                            <li><strong>Recovery Essentials:</strong> 7-9 hours sleep, 1-2 rest days weekly, stress management, active recovery.</li>
+                            <li><strong>Common Mistakes:</strong> Poor form, inconsistent training, neglecting recovery, rushing progression.</li>
+                            <li><strong>Progressive Overload:</strong> Weight progression (small increments), volume progression (add sets/reps), technique progression (improve form).</li>
+                        </ul>
+                        <p><strong>Bottom Line:</strong> Strength training builds muscle, boosts metabolism, and improves overall health through progressive overload, proper exercise selection, adequate nutrition, and recovery. Focus on consistency, proper form, and gradual progression for sustainable results.</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="blog.html" class="back-to-blog">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Blog
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+   <footer class="footer">
+    <div class="footer-container">
+        <!-- Footer Top Section -->
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="images/logow.png" alt="Fitness Architects Logo" class="footer-logo">
+                <p class="footer-description">Building stronger bodies and stronger communities through personalized fitness solutions.</p>
+                
+                <div class="footer-social">
+                    <h3 class="social-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-nav">
+                    <li><a href="trainers.html" class="footer-link">Our Trainers</a></li>
+                    <li><a href="services.html" class="footer-link">Services</a></li>
+                    <li><a href="personal-training.html" class="footer-link">Personal Training</a></li>
+                    <li><a href="blog.html" class="footer-link">Blog</a></li>
+                    <li><a href="bmi-calculator.html" class="footer-link">BMI Calculator</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-services">
+                <h3 class="footer-heading">Our Services</h3>
+                <ul class="footer-nav">
+                    <li><a href="personal-training.html" class="footer-link">Personal Training</a></li>
+                    <li><a href="online-training.html" class="footer-link">Online Training</a></li>
+                    <li><a href="nutrition-plans.html" class="footer-link">Nutrition Plans</a></li>
+                    <li><a href="group-classes.html" class="footer-link">Group Classes</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">CrossFit Training</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">Olympics weightlifting</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">fat loss</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">Rehabilitation</a></li>                                     
+                    <li><a href="rehabilitation.html" class="footer-link">Muscle gain</a></li>
+                    <li><a href="rehabilitation.html" class="footer-link">Bodybuilding</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3 class="footer-heading">Contact Info</h3>
+                <ul class="contact-info">
+                    <li class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <span>Dubai, United Arab Emirates</span>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-phone-alt contact-icon"></i>
+                        <a href="tel:+971505789033">+971 509859515 </a>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <a href="mailto:info@fitnessarchitects.ae">fitnessarchitects29@gmail.com </a>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-clock contact-icon"></i>
+                        <div>
+                            <span>Mon - Sat: 6:00 AM - 10:00 PM</span>
+                            <span>Sunday: 8:00 AM - 8:00 PM</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p class="copyright">&copy; <span id="current-year"></span> Fitness Architects. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html" class="legal-link">Privacy Policy</a>
+                    <a href="terms.html" class="legal-link">Terms of Service</a>
+                    <a href="sitemap.html" class="legal-link">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</footer>
+
+    <script src="main.js"></script>
+    <script>
+        function generateAISummary() {
+            const button = document.querySelector('.ai-summary-btn');
+            const summary = document.getElementById('aiSummary');
+            
+            // Add loading state
+            button.classList.add('loading');
+            button.innerHTML = '<i class="fas fa-spinner"></i> Generating Summary...';
+            
+            // Simulate AI processing time
+            setTimeout(() => {
+                // Remove loading state
+                button.classList.remove('loading');
+                button.innerHTML = '<i class="fas fa-check"></i> Summary Generated';
+                
+                // Show the summary
+                summary.classList.add('show');
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    button.innerHTML = '<i class="fas fa-magic"></i> Generate AI Summary';
+                }, 3000);
+            }, 2000);
+        }
+    </script>
+</body>
+</html> 

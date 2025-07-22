@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Male Trainer | Fitness Architects</title>
+    <link rel="icon" type="image/png" href="images/logoicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background: #f8fafc; }
+        .trainer-hero { display: flex; align-items: center; justify-content: center; background: #fff; border-radius: 24px; box-shadow: 0 8px 32px rgba(0,0,0,0.10); margin: 40px auto 0; max-width: 1000px; overflow: hidden; }
+        .trainer-hero-img { flex: 1; min-width: 320px; height: 420px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; }
+        .trainer-hero-img img { width: 100%; height: 100%; object-fit: cover; }
+        .trainer-hero-content { flex: 2; padding: 3rem; }
+        .trainer-hero-content h1 { font-size: 2.7rem; font-weight: 800; color: #1f2937; margin-bottom: 1rem; }
+        .trainer-hero-content p { color: #4b5563; font-size: 1.2rem; margin-bottom: 1.5rem; }
+        .specialties { display: flex; gap: 1.5rem; margin-bottom: 2rem; }
+        .specialty-card { background: #f0fdf4; border-radius: 14px; padding: 1.2rem 1.5rem; box-shadow: 0 2px 10px rgba(132,204,22,0.08); text-align: center; flex: 1; }
+        .specialty-card i { color: var(--secondary-color); font-size: 2rem; margin-bottom: 0.5rem; }
+        .specialty-card h3 { font-size: 1.1rem; font-weight: 700; color: #1f2937; margin-bottom: 0.3rem; }
+        .specialty-card p { font-size: 0.98rem; color: #4b5563; }
+        .trainer-bio { background: #fff; border-radius: 18px; box-shadow: 0 4px 18px rgba(0,0,0,0.07); max-width: 900px; margin: 2.5rem auto; padding: 2.5rem; }
+        .trainer-bio h2 { font-size: 2rem; font-weight: 700; color: #1f2937; margin-bottom: 1rem; }
+        .trainer-bio p { color: #374151; font-size: 1.08rem; line-height: 1.7; }
+        .book-cta { display: flex; justify-content: center; margin: 2.5rem 0; }
+        .book-cta a { background: #84cc16; color: #fff; font-weight: 700; padding: 1.1rem 2.8rem; border-radius: 30px; font-size: 1.2rem; text-decoration: none; transition: background 0.2s, transform 0.2s; box-shadow: 0 4px 18px rgba(132,204,22,0.13); }
+        .book-cta a:hover { background: #65a30d; transform: translateY(-2px) scale(1.04); }
+        @media (max-width: 900px) { .trainer-hero { flex-direction: column; } .trainer-hero-content { padding: 2rem; } }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="top-bar-container">
+                <div class="top-bar-left">
+                    <span>Make your life better. Call us <a href="tel:+971505789033">+971 50 578 9033</a></span>
+                </div>
+                <div class="top-bar-center">
+                    <span>Start your <strong>FITNESS JOURNEY</strong> today!</span>
+                </div>
+                <div class="top-bar-right">
+                    <span>Follow us</span>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="/" class="logo"><img src="images/logo.png" alt="Fitness Architects Logo" style="height:64px;width:auto;display:block;" /></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trainers.html">Our Trainers</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="fas fa-caret-down" style="font-size:0.9em;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="personal-training.html">Personal Training</a></li>
+                            <li><a href="online-training.html">Online Training</a></li>
+                            <li><a href="nutrition-plans.html">Nutrition Plans</a></li>
+                            <li><a href="group-classes.html">Group Classes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="bmi-calculator.html">BMI Calculator</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="cta-btn">Hire Us</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="breadcrumb" style="display:inline-flex;align-items:center;gap:0.5rem;background-color:rgba(255,255,255,0.95);padding:0.5rem;border-radius:12px;font-size:0.9rem;margin:40px 24px 2rem 24px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.05);backdrop-filter:blur(10px);">
+            <a href="index.html" style="text-decoration:none;font-weight:500;padding:0.5rem 1rem;border-radius:8px;transition:all 0.2s;color:#374151;">Home</a>
+            <span class="separator" style="color:#d1d5db;">/</span>
+            <a href="personal-trainer.html" style="text-decoration:none;font-weight:500;padding:0.5rem 1rem;border-radius:8px;transition:all 0.2s;color:#374151;">Personal Trainer</a>
+            <span class="separator" style="color:#d1d5db;">/</span>
+            <span class="current-page" style="font-weight:600;padding:0.5rem 1rem;border-radius:8px;color:#84cc16;background-color:#f0fdf4;">Male Trainer</span>
+        </div>
+        <section class="trainer-hero">
+            <div class="trainer-hero-img">
+                <img src="images/trainer 1.png" alt="Male Personal Trainer">
+            </div>
+            <div class="trainer-hero-content">
+                <h1>Meet Our Male Trainer</h1>
+                <p>Achieve your fitness goals with expert guidance from our certified male personal trainer. Specializing in muscle gain, strength, and weight loss, he will help you unlock your full potential with a personalized approach.</p>
+                <div class="specialties">
+                    <div class="specialty-card">
+                        <i class="fas fa-dumbbell"></i>
+                        <h3>Muscle Gain</h3>
+                        <p>Build lean muscle mass with science-backed training and nutrition plans.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Strength & Power</h3>
+                        <p>Increase your strength and athletic performance with proven methods.</p>
+                    </div>
+                    <div class="specialty-card">
+                        <i class="fas fa-fire"></i>
+                        <h3>Weight Loss</h3>
+                        <p>Lose fat and improve your health with tailored workouts and support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Male Coaches Section -->
+        <section class="coaches-section" style="max-width:1000px;margin:2.5rem auto 0 auto;">
+            <h2 style="font-size:2rem;font-weight:700;color:#1f2937;text-align:center;margin-bottom:2.2rem;">Our Male Coaches</h2>
+            <div class="coaches-grid" style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;">
+                <div class="coach-card" style="background:#fff;border-radius:18px;box-shadow:0 4px 18px rgba(0,0,0,0.07);padding:2rem 1.5rem;max-width:300px;flex:1 1 260px;text-align:center;">
+                    <img src="images/trainer 1.png" alt="Coach Alex" style="width:150px;height:150px;object-fit:cover;border-radius:50%;margin-bottom:1.1rem;box-shadow:0 2px 10px rgba(132,204,22,0.10);">
+                    <h3 style="font-size:1.25rem;font-weight:700;color:#1f2937;margin-bottom:0.3rem;">Coach Alex</h3>
+                    <div style="color:#84cc16;font-weight:600;margin-bottom:0.5rem;">Strength & Conditioning</div>
+                    <p style="color:#4b5563;font-size:1.01rem;">Alex specializes in building muscle and strength for all levels. His motivating style and expert knowledge help clients achieve real results.</p>
+                    <button class="view-more-btn" onclick="window.location.href='coach-alex.html'" style="margin-top:1rem;background:#84cc16;color:#fff;padding:0.6rem 1.5rem;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:background 0.2s;">View More</button>
+                </div>
+                <div class="coach-card" style="background:#fff;border-radius:18px;box-shadow:0 4px 18px rgba(0,0,0,0.07);padding:2rem 1.5rem;max-width:300px;flex:1 1 260px;text-align:center;">
+                    <img src="images/trainer 3.jpg" alt="Coach Samir" style="width:150px;height:150px;object-fit:cover;border-radius:50%;margin-bottom:1.1rem;box-shadow:0 2px 10px rgba(132,204,22,0.10);">
+                    <h3 style="font-size:1.25rem;font-weight:700;color:#1f2937;margin-bottom:0.3rem;">Coach Samir</h3>
+                    <div style="color:#84cc16;font-weight:600;margin-bottom:0.5rem;">Weight Loss Expert</div>
+                    <p style="color:#4b5563;font-size:1.01rem;">Samir is passionate about helping clients lose weight and keep it off. He creates custom plans that are both effective and sustainable.</p>
+                    <button class="view-more-btn" onclick="window.location.href='coach-samir.html'" style="margin-top:1rem;background:#84cc16;color:#fff;padding:0.6rem 1.5rem;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:background 0.2s;">View More</button>
+                </div>
+                <div class="coach-card" style="background:#fff;border-radius:18px;box-shadow:0 4px 18px rgba(0,0,0,0.07);padding:2rem 1.5rem;max-width:300px;flex:1 1 260px;text-align:center;">
+                    <img src="images/lifting.jpg" alt="Coach David" style="width:150px;height:150px;object-fit:cover;border-radius:50%;margin-bottom:1.1rem;box-shadow:0 2px 10px rgba(132,204,22,0.10);">
+                    <h3 style="font-size:1.25rem;font-weight:700;color:#1f2937;margin-bottom:0.3rem;">Coach David</h3>
+                    <div style="color:#84cc16;font-weight:600;margin-bottom:0.5rem;">Functional Fitness</div>
+                    <p style="color:#4b5563;font-size:1.01rem;">David focuses on functional training and injury prevention. His sessions are dynamic, safe, and tailored to your needs.</p>
+                    <button class="view-more-btn" onclick="window.location.href='coach-david.html'" style="margin-top:1rem;background:#84cc16;color:#fff;padding:0.6rem 1.5rem;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:background 0.2s;">View More</button>
+                </div>
+            </div>
+        </section>
+        <section class="trainer-bio">
+            <h2>About Your Trainer</h2>
+            <p>With over 10 years of experience, our male trainer is passionate about helping clients transform their bodies and lives. He holds multiple certifications in strength training, nutrition, and functional fitness. His approach is supportive, motivating, and results-driven—ensuring you stay on track and achieve your goals safely and effectively.</p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" style="padding: 80px 0; background: #fff; position: relative;">
+            <div class="faq-container" style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+                <h2 style="text-align: center; font-size: 2.4rem; color: #14532d; margin-bottom: 1rem; font-weight: 700;">Frequently Asked Questions</h2>
+                <p class="faq-intro" style="text-align: center; font-size: 1.2rem; color: #4b5563; max-width: 800px; margin: 0 auto 3rem; line-height: 1.6;">Get answers to common questions about our male trainers and personal training services in Dubai</p>
+                
+                <div class="faq-grid" style="display: grid; gap: 20px; max-width: 900px; margin: 0 auto;">
+                    <div class="faq-item" style="background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(132,204,22,0.08); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="faq-question" style="background: rgba(132,204,22,0.08); padding: 20px; border-radius: 12px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
+                            <h3 style="font-size: 1.2rem; color: #1f2937; font-weight: 600; margin: 0;">What qualifications do your male trainers have?</h3>
+                            <i class="fas fa-chevron-down" style="color: #84cc16; font-size: 1.1rem; transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                            <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.6; margin: 0;">Our male trainers hold internationally recognized certifications including NASM, ACE, ISSA, and CrossFit Level 1. They also have specialized certifications in nutrition, injury prevention, and functional training. All trainers have a minimum of 5 years of experience and undergo continuous education to stay updated with the latest fitness trends and techniques.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" style="background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(132,204,22,0.08); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="faq-question" style="background: rgba(132,204,22,0.08); padding: 20px; border-radius: 12px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
+                            <h3 style="font-size: 1.2rem; color: #1f2937; font-weight: 600; margin: 0;">How do I choose the right male trainer for my goals?</h3>
+                            <i class="fas fa-chevron-down" style="color: #84cc16; font-size: 1.1rem; transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                            <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.6; margin: 0;">We offer a free consultation where you can discuss your fitness goals, experience level, and preferences. Our trainers specialize in different areas such as weight loss, muscle building, sports performance, and rehabilitation. We'll match you with a trainer whose expertise aligns with your specific goals and training style preferences.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" style="background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(132,204,22,0.08); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="faq-question" style="background: rgba(132,204,22,0.08); padding: 20px; border-radius: 12px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
+                            <h3 style="font-size: 1.2rem; color: #1f2937; font-weight: 600; margin: 0;">What is the cost of personal training with male trainers?</h3>
+                            <i class="fas fa-chevron-down" style="color: #84cc16; font-size: 1.1rem; transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                            <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.6; margin: 0;">Personal training sessions with our male trainers start from AED 200 per session. We offer various packages including single sessions, monthly packages, and long-term commitments with discounted rates. All packages include personalized workout plans, nutrition guidance, and progress tracking. Contact us for detailed pricing and package options.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" style="background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(132,204,22,0.08); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="faq-question" style="background: rgba(132,204,22,0.08); padding: 20px; border-radius: 12px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
+                            <h3 style="font-size: 1.2rem; color: #1f2937; font-weight: 600; margin: 0;">Do male trainers work with female clients?</h3>
+                            <i class="fas fa-chevron-down" style="color: #84cc16; font-size: 1.1rem; transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                            <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.6; margin: 0;">Yes, our male trainers work with clients of all genders. We believe in providing professional, respectful training environments where all clients feel comfortable and supported. Many of our male trainers have extensive experience working with female clients and understand the specific needs and goals that may differ from male clients.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" style="background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(132,204,22,0.08); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="faq-question" style="background: rgba(132,204,22,0.08); padding: 20px; border-radius: 12px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
+                            <h3 style="font-size: 1.2rem; color: #1f2937; font-weight: 600; margin: 0;">What training styles do male trainers specialize in?</h3>
+                            <i class="fas fa-chevron-down" style="color: #84cc16; font-size: 1.1rem; transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                            <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.6; margin: 0;">Our male trainers specialize in various training styles including strength training, functional fitness, CrossFit, HIIT, bodybuilding, sports-specific training, and rehabilitation. Each trainer has unique expertise areas, and we'll match you with someone whose specialization aligns with your goals and preferred training style.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" style="background: #fff; border-radius: 16px; box-shadow: 0 4px 20px rgba(132,204,22,0.08); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="faq-question" style="background: rgba(132,204,22,0.08); padding: 20px; border-radius: 12px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease;">
+                            <h3 style="font-size: 1.2rem; color: #1f2937; font-weight: 600; margin: 0;">How often should I train with a male trainer?</h3>
+                            <i class="fas fa-chevron-down" style="color: #84cc16; font-size: 1.1rem; transition: transform 0.3s ease;"></i>
+                        </div>
+                        <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                            <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.6; margin: 0;">The frequency depends on your goals, fitness level, and schedule. For beginners, we recommend 2-3 sessions per week. Intermediate clients typically do 2 sessions per week, while advanced clients might do 1-2 sessions per week with additional independent workouts. Your trainer will create a personalized plan that fits your lifestyle and goals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+        // FAQ functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const icon = question.querySelector('i');
+                
+                question.addEventListener('click', function() {
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            const otherAnswer = otherItem.querySelector('.faq-answer');
+                            const otherIcon = otherItem.querySelector('i');
+                            otherAnswer.style.maxHeight = '0';
+                            otherAnswer.style.padding = '0 20px';
+                            otherIcon.style.transform = 'rotate(0deg)';
+                            otherItem.style.transform = 'translateY(0)';
+                        }
+                    });
+                    
+                    // Toggle current FAQ item
+                    if (answer.style.maxHeight === '0px' || answer.style.maxHeight === '') {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        answer.style.padding = '0 20px 20px';
+                        icon.style.transform = 'rotate(180deg)';
+                        item.style.transform = 'translateY(-2px)';
+                    } else {
+                        answer.style.maxHeight = '0';
+                        answer.style.padding = '0 20px';
+                        icon.style.transform = 'rotate(0deg)';
+                        item.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+        });
+        </script>
+
+        <!-- CTA Section -->
+        <section class="cta-section" style="background:linear-gradient(135deg,#14532d,#1f2937);padding:4rem 2rem;text-align:center;margin:0 24px 4rem 24px;border-radius:24px;color:#fff;">
+            <h2 style="font-size:2.5rem;font-weight:800;margin-bottom:1.5rem;">Ready to Train with Our Male Trainers?</h2>
+            <p style="font-size:1.2rem;margin-bottom:2rem;opacity:0.9;">Choose your preferred trainer and start your fitness transformation journey today.</p>
+            <a href="contact.html" style="display:inline-block;background:#84cc16;color:#fff;font-weight:700;padding:1.2rem 3rem;border-radius:12px;text-decoration:none;font-size:1.1rem;transition:all 0.3s ease;" onmouseover="this.style.background='#65a30d';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#84cc16';this.style.transform='translateY(0)'">Book Your Session</a>
+        </section>
+
+        <!-- Contact Form Section Start -->
+        <section class="blog-contact-section" style="background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);padding:60px 24px;">
+            <div class="blog-contact-form-wrapper" style="max-width:750px;margin:0 auto;background:#fff;border-radius:36px;box-shadow:0 10px 40px rgba(0,0,0,0.18);display:flex;align-items:stretch;overflow:hidden;">
+                <div class="blog-contact-form-side" style="flex:1 1 50%;padding:2rem 1.5rem;display:flex;flex-direction:column;justify-content:center;min-width:280px;">
+                    <div class="blog-contact-header" style="text-align:center;margin-bottom:2rem;">
+                        <h2 style="font-size:2.3rem;color:#1f2937;font-weight:700;margin-bottom:0.5rem;">Ready to Transform Your Life?</h2>
+                        <p style="color:#4b5563;font-size:1.1rem;">Book a free consultation with our expert trainers to find the perfect program for you.</p>
+                    </div>
+                    <form class="blog-contact-form" id="blogContactForm" autocomplete="off">
+                        <div class="form-group" style="margin-bottom:1.5rem;">
+                            <label for="blog-name" style="display:block;margin-bottom:0.5rem;color:#374151;font-weight:500;">Full name *</label>
+                            <input type="text" id="blog-name" name="name" required placeholder="Enter your full name" />
+                        </div>
+                        <div class="form-group" style="margin-bottom:1.5rem;">
+                            <label for="blog-email" style="display:block;margin-bottom:0.5rem;color:#374151;font-weight:500;">Email *</label>
+                            <input type="email" id="blog-email" name="email" required placeholder="Enter your email address" />
+                        </div>
+                        <div class="form-group">
+                            <label for="blog-phone">Phone number *</label>
+                            <div class="phone-input-wrapper" style="display: flex; align-items: center; width: 100%;">
+                                <select id="blog-country-code" name="country-code" class="country-code-select" style="width: 30%; min-width: 90px; max-width: 140px; border: 1px solid #d1d5db; border-right: none; border-radius: 8px 0 0 8px; height: 48px; font-size: 1rem; font-family: inherit;">
+                                    <option value="+971" selected>🇦🇪 +971</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+91">🇮🇳 +91</option>
+                                    <option value="+61">🇦🇺 +61</option>
+                                    <option value="+81">🇯🇵 +81</option>
+                                    <option value="+49">🇩🇪 +49</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+39">🇮🇹 +39</option>
+                                </select>
+                                <input type="tel" id="blog-phone" name="phone" required placeholder="Enter phone number" pattern="[0-9]+" inputmode="numeric" style="width: 70%; border: 1px solid #d1d5db; border-left: none; border-radius: 0 8px 8px 0; height: 48px; font-size: 1rem; padding-left: 1em;" />
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom:1.5rem;">
+                            <label for="blog-service" style="display:block;margin-bottom:0.5rem;color:#374151;font-weight:500;">Service Interested In *</label>
+                            <select id="blog-service" name="service" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="personal-training">Personal Training</option>
+                                <option value="online-training">Online Training</option>
+                                <option value="nutrition">Nutrition Plans</option>
+                                <option value="group-classes">Group Classes</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom:1.5rem;">
+                            <label for="blog-message" style="display:block;margin-bottom:0.5rem;color:#374151;font-weight:500;">Your Message</label>
+                            <textarea id="blog-message" name="message" rows="4" placeholder="Type your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" style="width:100%;margin-top:1.2rem;">Book Your Consultation</button>
+                    </form>
+                    <div class="success-message" id="blogSuccessMessage" style="display:none;text-align:center;color:#10b981;font-weight:600;margin-top:1rem;animation:successCheck 0.5s ease-out;">
+                        <i class="fas fa-check-circle"></i> Thank you! We'll get back to you soon.
+                    </div>
+                </div>
+                <div class="blog-contact-img-side" style="flex:1 1 50%;position:relative;min-width:320px;background:#f0fdf4;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+                    <img src="images/contact.jpg" alt="Fitness consultation" style="width:100%;height:100%;object-fit:cover;display:block;">
+                </div>
+            </div>
+        </section>
+        <!-- Contact Form Section End -->
+        <script>
+        // Blog contact form logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('blogContactForm');
+            const submitBtn = form ? form.querySelector('.submit-btn') : null;
+            const successMessage = document.getElementById('blogSuccessMessage');
+            if (form && submitBtn && successMessage) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    submitBtn.classList.add('loading');
+                    submitBtn.textContent = 'Sending...';
+                    setTimeout(() => {
+                        submitBtn.classList.remove('loading');
+                        submitBtn.textContent = 'Book Your Consultation';
+                        successMessage.style.display = 'block';
+                        form.reset();
+                        setTimeout(() => {
+                            successMessage.style.display = 'none';
+                        }, 5000);
+                    }, 2000);
+                });
+                submitBtn.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    ripple.classList.add('ripple');
+                    this.appendChild(ripple);
+                    setTimeout(() => { ripple.remove(); }, 600);
+                });
+                const formFields = form.querySelectorAll('input, select, textarea');
+                formFields.forEach(field => {
+                    field.addEventListener('focus', function() {
+                        this.parentElement.style.transform = 'scale(1.02)';
+                    });
+                    field.addEventListener('blur', function() {
+                        this.parentElement.style.transform = 'scale(1)';
+                    });
+                });
+            }
+        });
+        </script>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logow.png" alt="Fitness Architects Logo" class="footer-logo">
+                    <p>Building stronger bodies and stronger communities through personalized fitness solutions.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="trainers.html">Our Trainers</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="/personal-trainer">Personal Trainer</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="/services/personal-training">Personal Training</a></li>
+                        <li><a href="/services/online-training">Online Training</a></li>
+                        <li><a href="/services/nutrition">Nutrition Plans</a></li>
+                        <li><a href="/services/group-classes">Group Classes</a></li>
+                        <li><a href="/services/crossfit">CrossFit Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Dubai, United Arab Emirates</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+971 XX XXX XXXX</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@fitnessarchitects.ae</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 6:00 AM - 10:00 PM</span>
+                            <span>Sunday: 8:00 AM - 8:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Fitness Architects. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="/privacy">Privacy Policy</a>
+                        <a href="/terms">Terms of Service</a>
+                        <a href="/sitemap">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+    <!-- Modals for Coach Details -->
+    <div id="alex-modal" class="coach-modal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(31,41,55,0.85);align-items:center;justify-content:center;">
+      <div class="modal-content" style="background:#fff;padding:2.5rem 2rem;border-radius:18px;max-width:400px;width:90%;position:relative;text-align:left;">
+        <button class="close-modal" style="position:absolute;top:18px;right:18px;background:none;border:none;font-size:1.5rem;color:#84cc16;cursor:pointer;">&times;</button>
+        <h2>Coach Alex</h2>
+        <p><strong>Specialty:</strong> Strength & Conditioning</p>
+        <p>Alex has over 8 years of experience in personal training, specializing in muscle gain and strength development. He is certified by NASM and has helped hundreds of clients achieve their fitness goals through tailored programs and motivational coaching. Alex believes in a holistic approach, focusing on both physical and mental well-being.</p>
+        <ul style="margin-top:1rem;">
+          <li>Certified NASM Personal Trainer</li>
+          <li>Specialist in Muscle Gain & Strength</li>
+          <li>Motivational Coaching</li>
+          <li>Nutrition Guidance</li>
+        </ul>
+      </div>
+    </div>
+    <div id="samir-modal" class="coach-modal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(31,41,55,0.85);align-items:center;justify-content:center;">
+      <div class="modal-content" style="background:#fff;padding:2.5rem 2rem;border-radius:18px;max-width:400px;width:90%;position:relative;text-align:left;">
+        <button class="close-modal" style="position:absolute;top:18px;right:18px;background:none;border:none;font-size:1.5rem;color:#84cc16;cursor:pointer;">&times;</button>
+        <h2>Coach Samir</h2>
+        <p><strong>Specialty:</strong> Weight Loss Expert</p>
+        <p>Samir is passionate about sustainable weight loss and healthy living. With 6+ years of experience, he creates custom plans that fit each client's lifestyle. Samir is known for his supportive approach and ability to help clients overcome plateaus.</p>
+        <ul style="margin-top:1rem;">
+          <li>Certified Weight Loss Specialist</li>
+          <li>Behavior Change Coach</li>
+          <li>Custom Meal Planning</li>
+          <li>Group Fitness Leader</li>
+        </ul>
+      </div>
+    </div>
+    <div id="david-modal" class="coach-modal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(31,41,55,0.85);align-items:center;justify-content:center;">
+      <div class="modal-content" style="background:#fff;padding:2.5rem 2rem;border-radius:18px;max-width:400px;width:90%;position:relative;text-align:left;">
+        <button class="close-modal" style="position:absolute;top:18px;right:18px;background:none;border:none;font-size:1.5rem;color:#84cc16;cursor:pointer;">&times;</button>
+        <h2>Coach David</h2>
+        <p><strong>Specialty:</strong> Functional Fitness</p>
+        <p>David focuses on functional movement and injury prevention. He has a background in sports science and has worked with athletes and general clients alike. David's sessions are dynamic, safe, and always tailored to individual needs.</p>
+        <ul style="margin-top:1rem;">
+          <li>BSc Sports Science</li>
+          <li>Certified Functional Trainer</li>
+          <li>Injury Prevention Specialist</li>
+          <li>Dynamic Group Classes</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.view-more-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var modal = document.getElementById(btn.getAttribute('data-modal'));
+          if (modal) { modal.style.display = 'flex'; }
+        });
+      });
+      document.querySelectorAll('.close-modal').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          btn.closest('.coach-modal').style.display = 'none';
+        });
+      });
+      window.addEventListener('click', function(e) {
+        document.querySelectorAll('.coach-modal').forEach(function(modal) {
+          if (e.target === modal) { modal.style.display = 'none'; }
+        });
+      });
+    });
+    </script>
+</body>
+</html> 

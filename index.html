@@ -1,0 +1,1485 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Architects</title>
+    <link rel="icon" type="image/png" href="images/logoicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style> /* Header Overrides */
+        .site-header .top-bar {
+            display: none;
+        }
+        .navbar .nav-links a[href="/index"],
+        .navbar .nav-links a[href="index.html"] {
+            font-weight: 700;
+            color: var(--secondary-color);
+            padding-bottom: 5px;
+        }
+        .navbar .cta-btn {
+            background-color: #84cc16;
+            color: white;
+            transition: background-color 0.2s;
+        }
+        .navbar .cta-btn:hover {
+            background-color: #65a30d;
+            color: white;
+        }
+
+        /* Contact Form Section */
+        .home-contact-section {
+            padding: 30px 24px;
+            background-color: #f8fafc;
+        }
+        .home-contact-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .home-contact-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .home-contact-header .subtitle {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .home-contact-header h2 {
+            font-size: 2.8rem;
+            color: #1f2937;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .home-contact-header p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #4b5563;
+            line-height: 1.7;
+        }
+        .contact-form-section {
+            display: flex;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            overflow: hidden;
+            flex-wrap: wrap;
+        }
+        .contact-form-wrapper {
+            flex: 1 1 50%;
+            padding: 3rem;
+            min-width: 320px;
+        }
+        .contact-form .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .contact-form label {
+            position: absolute;
+            left: 1rem;
+            top: 0.9rem;
+            color: #9ca3af;
+            background-color: transparent;
+            padding: 0 0.25rem;
+            margin: 0;
+            transition: all 0.2s;
+            pointer-events: none;
+        }
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            background-color: #fff;
+            transition: border-color 0.2s;
+        }
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+        .contact-form input:hover,
+        .contact-form select:hover,
+        .contact-form textarea:hover {
+            border-color: var(--secondary-color);
+        }
+        .contact-form input:focus + label,
+        .contact-form input:not(:placeholder-shown) + label,
+        .contact-form textarea:focus + label,
+        .contact-form textarea:not(:placeholder-shown) + label,
+        .contact-form select:focus + label,
+        .contact-form select:valid + label {
+            top: -0.7rem;
+            left: 0.75rem;
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            background-color: white;
+        }
+        .contact-form select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.7rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .contact-form .submit-btn {
+            background-color: #84cc16;
+            color: white;
+            border: none;
+            padding: 0.9rem 2.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .contact-form .submit-btn:hover {
+            background-color: #65a30d;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(132, 204, 22, 0.3);
+        }
+        .contact-image-wrapper {
+            flex: 1 1 50%;
+            min-width: 320px;
+        }
+        .contact-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (max-width: 900px) {
+            .contact-form-section {
+                flex-direction: column-reverse;
+            }
+             .contact-form-wrapper {
+                padding: 2rem;
+            }
+        }
+        /* Base Navbar Styles */
+.navbar {
+    position: relative;
+    padding: 15px 0;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* .logo-img {
+    height: 45px;
+    transition: all 0.3s ease;
+} */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav-links > li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Active state */
+.navbar .nav-links a.active {
+    font-weight: 700;
+    color: var(--secondary-color);
+    padding-bottom: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 15px 0;
+    z-index: 100;
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    padding: 10px 20px;
+    display: block;
+    color: #555;
+    font-size: 14px;
+}
+
+.dropdown-menu li a:hover {
+    background: #f5f5f5;
+    color: var(--secondary-color);
+}
+
+/* CTA Button */
+.nav-cta-btn {
+    background-color: #84cc16;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-left: 20px;
+    transition: background-color 0.2s;
+}
+
+.nav-cta-btn:hover {
+    background-color: #65a30d;
+    color: white;
+}
+
+/* Mobile Menu Toggle (hidden by default on desktop/tablet) */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Tablet Styles (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+    
+    /* .logo-img {
+        max-height: 40px;
+    } */
+    
+    .nav-links {
+        gap: 12px;
+    }
+    
+    .nav-links > li > a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+    
+    .dropdown-menu {
+        width: 180px;
+        padding: 10px 0;
+    }
+    
+    .dropdown-menu li a {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+    
+    .nav-cta-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin-left: 15px;
+    }
+    
+    /* Hide mobile toggle on tablets */
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    /* Ensure nav menu stays visible */
+    .nav-menu {
+        display: flex !important;
+    }
+}
+
+/* Additional tweaks for smaller tablets */
+@media (max-width: 900px) {
+    .nav-links {
+        gap: 8px;
+    }
+    
+    .dropdown-menu {
+        left: -30px;
+    }
+/*     
+    .logo-img {
+        max-height: 35px;
+    } */
+    
+    .nav-cta-btn {
+        margin-left: 10px;
+    }
+}
+
+/* Mobile styles (under 768px) - you already have these */
+@media (max-width: 767px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        display: none;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        display: none;
+        padding-left: 20px;
+    }
+    
+    /* Mobile-specific JavaScript will handle showing/hiding dropdowns */
+}
+
+
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="top-bar-container">
+                <div class="top-bar-left">
+                    <span>Make your life better. Call us <a href="tel:+971505789033">+971 50 578 9033</a></span>
+                </div>
+                <div class="top-bar-center">
+                    <span>Start your <strong>FITNESS JOURNEY</strong> today!</span>
+                </div>
+                <div class="top-bar-right">
+                    <span>Follow us</span>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        
+            <nav class="navbar">
+                <div class="nav-container">
+                    <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                        <span class="hamburger"></span>
+                    </button>
+                    
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" alt="Fitness Architects Logo" class="logo-img">
+                    </a>
+                    
+                    <div class="nav-menu">
+                        <ul class="nav-links">
+                            <li><a href="index.html" class="active">Home</a></li>
+                            <li><a href="trainers.html">Our Trainers</a></li>
+                            <li class="dropdown">
+                                <a href="services.html">Services <i class="fas fa-caret-down dropdown-icon"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="personal-training.html">Personal Training</a></li>
+                                    <li><a href="online-training.html">Online Training</a></li>
+                                    <li><a href="nutrition-plans.html">Nutrition Plans</a></li>
+                                    <li><a href="group-classes.html">Group Classes</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="bmi-calculator.html">BMI Calculator</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        
+                        <a href="contact.html" class="nav-cta-btn">Hire Us</a>
+                    </div>
+                </div>
+            </nav>
+    </header>
+
+    <!-- Hero Section Start -->
+    <main id="main-content">
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-image-container">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-bg-shape"></div>
+                    <img src="images/hero img.jpg" alt="Personal Trainer in Dubai" class="hero-image">
+                </div>
+            </div>
+            <div class="hero-text-content">
+                <span class="hero-subtitle">ELEVATE YOUR FITNESS JOURNEY</span>
+                <h1 class="hero-title">PERSONAL TRAINER ABU DHABI</h1>
+                <p class="hero-description">
+                    Whether you're looking to lose weight, build muscle, or simply improve your
+                    overall fitness, a personal trainer can provide you with the guidance and
+                    motivation you need to succeed. So why wait? Contact a personal trainer in
+                    Dubai today and start your fitness journey!
+                </p>
+                <a href="contact.html" class="cta-btn hero-cta">Free Consultation</a>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Home Contact Form Section Start -->
+    <section class="home-contact-section">
+        <div class="home-contact-container">
+            <div class="home-contact-header">
+                <span class="subtitle">GET IN TOUCH</span>
+                <h2>Contact Us For A Free Consultation</h2>
+                <p>
+                    Ready to take the first step towards achieving your fitness goals? Fill out the form below and our team will get back to you to schedule your free consultation. Let's start your fitness transformation together!
+                </p>
+            </div>
+
+            <div class="contact-form-section">
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="homeContactForm" autocomplete="off">
+                        <div class="form-group">
+                            <input type="text" id="home-name" name="name" required placeholder=" " />
+                            <label for="home-name">Full name *</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="home-email" name="email" required placeholder=" " />
+                            <label for="home-email">Email *</label>
+                        </div>
+                        <div class="form-group">
+                            
+                            <div class="phone-input-wrapper" style="display: flex; align-items: center; width: 100%;">
+                                <!-- <select id="home-country-code" name="country-code" class="country-code-select" style="width: 30%; min-width: 90px; max-width: 140px; border: 1px solid #d1d5db; border-right: none; border-radius: 8px 0 0 8px; height: 48px; font-size: 1rem; font-family: inherit;">
+                                    <option value="+971" selected>🇦🇪 +971</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+91">🇮🇳 +91</option>
+                                    <option value="+61">🇦🇺 +61</option>
+                                    <option value="+81">🇯🇵 +81</option>
+                                    <option value="+49">🇩🇪 +49</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+39">🇮🇹 +39</option>
+                                </select> -->
+                                <input type="tel" id="home-phone" name="phone" required placeholder=" " pattern="[0-9]+" inputmode="numeric" style="width: 100%; border: 1px solid #d1d5db; border-radius: 8px 8px 8px 8px; height: 48px; font-size: 1rem; padding-left: 1em;" />
+                                    <label for="home-email">Phone number *</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select id="home-service" name="service" required>
+                        <option value="" disabled selected>Select a service</option>
+                        <option value="personal-training">Personal Training</option>
+                        <option value="online-training">Online Training</option>
+                        <option value="nutrition">Nutrition Plans</option>
+                        <option value="group-classes">Group Classes</option>
+                        <option value="crossfit">CrossFit Training</option>
+                        <option value="weightlifting">Olympic Weightlifting</option>
+                        <option value="weight-loss">Weight Loss / Fat Loss</option>
+                        <option value="rehabilitation">Rehabilitation & Recovery</option>
+                        <option value="muscle-gain">Muscle Gain</option>
+                        <option value="muscle-hypertrophy">Muscle Hypertrophy / Bodybuilding</option>
+                        <option value="group-functional">Group Functional Training</option>
+
+                            </select>
+                            <!-- <label for="home-service">Service Interested In *</label> -->
+                        </div>
+                        <div class="form-group">
+                            <textarea id="home-message" name="message" rows="4" placeholder=" "></textarea>
+                            <label for="home-message">Your Message</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Get a Free Quote</button>
+                    </form>
+                </div>
+                <div class="contact-image-wrapper">
+                    <img src="images/contact.jpg" alt="Fitness model">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Home Contact Form Section End -->
+
+    <!-- About Section Start -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Fitness Architects</h2>
+                <p>
+                    At Fitness Architects, we believe in building strong bodies and strong communities. Our team of certified trainers and wellness experts are dedicated to helping you achieve your fitness goals through personalized programs, innovative classes, and ongoing support. Whether you're a beginner or a seasoned athlete, our holistic approach ensures you get the results you want in a motivating and inclusive environment. With state-of-the-art facilities and expert guidance, we create customized fitness solutions that help you reach your full potential.
+                </p>
+                <div class="about-mission">
+                    <a href="contact.html" class="cta-btn about-cta">Join Us Now</a>
+                </div>
+            </div>
+            <div class="about-video">
+                <video poster="images/logoicon.png" class="aboutus-video" preload="none" autoplay loop muted playsinline>
+                    <source src="images/aboutus.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+        
+    <!-- Why Choose Us Section Start -->
+    <section class="why-choose-section">
+        <div class="why-choose-container">
+            <h2>Why Choose Fitness Architects?</h2>
+            <div class="why-choose-grid">
+                <div class="why-choose-card">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Personalized Approach</h3>
+                    <p>Every client receives a customized training program tailored to their specific goals, fitness level, and lifestyle. We adapt and evolve your plan as you progress.</p>
+                </div>
+                <div class="why-choose-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certified Expertise</h3>
+                    <p>Our trainers hold internationally recognized certifications and continuously update their knowledge with the latest fitness research and techniques.</p>
+                </div>
+                <div class="why-choose-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Proven Results</h3>
+                    <p>Track your progress with regular assessments and measurements. Our clients consistently achieve their fitness goals through our structured approach.</p>
+                </div>
+                <div class="why-choose-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Flexible Scheduling</h3>
+                    <p>We understand busy lifestyles. Choose from early morning, evening, or weekend sessions that fit your schedule perfectly.</p>
+                </div>
+                <div class="why-choose-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Supportive Environment</h3>
+                    <p>Join a community of like-minded individuals. Our trainers provide constant motivation and support throughout your fitness journey.</p>
+                </div>
+                <div class="why-choose-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Holistic Wellness</h3>
+                    <p>Beyond physical training, we focus on nutrition guidance, stress management, and overall lifestyle improvements for sustainable results.</p>
+                </div>
+            </div>
+            <div class="why-choose-cta">
+                <p>Ready to transform your fitness journey?</p>
+                <a href="contact.html" class="cta-btn">Book Your Free Consultation</a>
+            </div>
+        </div>
+    </section>
+    <!-- Why Choose Us Section End -->
+        
+    <!-- Training Programs Section Start -->
+    <section class="training-programs-section">
+        <div class="training-programs-container">
+            <h2>Choose Your Training Program</h2>
+            <p class="programs-intro">Discover our specialized training programs, each designed and led by expert trainers to help you achieve your specific fitness goals.</p>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>CrossFit Training</h3>
+                    <p>High-intensity functional movements that combine strength, cardio, and flexibility. Perfect for those seeking a challenging, varied workout that delivers results.</p>
+                    <a href="trainings/crossfit-training.html" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-weight-hanging"></i>
+                    </div>
+                    <h3>Olympic Weightlifting</h3>
+                    <p>Master the art of Olympic lifts with expert coaching. Perfect your technique and build explosive power through proper form and progressive training.</p>
+                    <a href="trainings/olympic-weightlifting.html" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Weight Loss / Fat Loss</h3>
+                    <p>Science-backed programs combining effective workouts and nutrition guidance to help you achieve sustainable weight loss and improved body composition.</p>
+                    <a href="trainings/weight-loss.html" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Rehabilitation & Recovery</h3>
+                    <p>Specialized programs for injury recovery and return to sport. Our trainers work with your medical team to ensure safe, effective rehabilitation.</p>
+                    <a href="trainings/rehabilitation-recovery.html" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Muscle Gain</h3>
+                    <p>Structured strength training programs designed to maximize muscle growth through progressive overload and optimal recovery strategies.</p>
+                    <a href="trainings/muscle-gain.html" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3>Nutrition Advisory</h3>
+                    <p>Personalized nutrition plans that complement your training goals. Get expert guidance on meal planning, supplementation, and dietary strategies.</p>
+                    <a href="trainings/nutrition-advisory.html" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Muscle Hypertrophy</h3>
+                    <p>Advanced bodybuilding techniques and periodization strategies to help you achieve optimal muscle growth and definition.</p>
+                    <a href="trainings/muscle-hypertrophy.html" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Group Functional Training</h3>
+                    <p>Dynamic group sessions focusing on functional movements, team motivation, and high-energy workouts in a supportive environment.</p>
+                    <a href="trainings/group-functional-training.html" class="program-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="programs-cta">
+                <h3>Ready to Start Your Transformation?</h3>
+                <p>Book a consultation with our expert trainers to find the perfect program for your goals.</p>
+                <a href="contact.html" class="cta-btn">Book Your Consultation</a>
+            </div>
+        </div>
+    </section>
+    <!-- Training Programs Section End -->
+        
+<!-- Client Success Stories Section - 16:9 Video Version -->
+<section class="success-stories">
+    <div class="container">
+        <h2>Client Success Stories</h2>
+        <p class="section-intro">Hear from our clients about their transformation journeys with Fitness Architects</p>
+        
+        <!-- Video Testimonial Slider -->
+        <div class="video-testimonial-slider">
+            <div class="video-slider-container">
+                <!-- Video Testimonial 1 -->
+                <div class="video-testimonial active reel-testimonial">
+                    <div class="video-wrapper reel-video">
+                        <video poster="assets/video-thumbnail-1.jpg">
+                            <source src="assets/testimonial-1.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-pause-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="client-info reel-client-info">
+                        <h3>Sarah K.</h3>
+                        <p>Lost 18kg in 4 months</p>
+                    </div>
+                </div>
+                
+                <!-- Video Testimonial 2 -->
+                <div class="video-testimonial reel-testimonial">
+                    <div class="video-wrapper reel-video">
+                        <video poster="assets/video-thumbnail-2.jpg">
+                            <source src="assets/testimonial-2.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-pause-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="client-info reel-client-info">
+                        <h3>Ahmed R.</h3>
+                        <p>Gained 8kg muscle in 3 months</p>
+                    </div>
+                </div>
+                
+                <!-- Video Testimonial 3 -->
+                <div class="video-testimonial reel-testimonial">
+                    <div class="video-wrapper reel-video">
+                        <video poster="assets/video-thumbnail-3.jpg">
+                            <source src="assets/testimonial-3.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-pause-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="client-info reel-client-info">
+                        <h3>Priya M.</h3>
+                        <p>Improved endurance by 40%</p>
+                    </div>
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <button class="slider-arrow prev-arrow">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-arrow next-arrow">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Text Testimonial Slider -->
+        <div class="text-testimonial-slider">
+            <div class="text-slider-container">
+                <!-- Text Testimonial 1 -->
+                <div class="text-testimonial active">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Fitness Architects completely transformed my approach to health. Their personalized training and nutrition plan helped me lose weight sustainably while building strength I never thought possible.</p>
+                        <div class="client-meta">
+                            <h4>Mariam Al M.</h4>
+                            <p>Abu Dhabi • 6 Month Program</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Text Testimonial 2 -->
+                <div class="text-testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">After trying several trainers in Dubai, I finally found Fitness Architects. Their scientific approach and constant motivation helped me achieve my competition physique.</p>
+                        <div class="client-meta">
+                            <h4>David L.</h4>
+                            <p>Dubai • 12 Week Challenge</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Text Testimonial 3 - Indian -->
+                <div class="text-testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">As an Indian vegetarian, I struggled to find proper nutrition guidance. Fitness Architects created a perfect plant-based plan that helped me gain muscle without compromising my dietary beliefs.</p>
+                        <div class="client-meta">
+                            <h4>Rajesh P.</h4>
+                            <p>Indian • Muscle Gain Program</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Text Testimonial 4 - Mexican -->
+                <div class="text-testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Coming from Mexico, I needed help adjusting my training for the Abu Dhabi climate. The team customized my hydration and recovery plan perfectly!</p>
+                        <div class="client-meta">
+                            <h4>Carlos M.</h4>
+                            <p>Mexican • Endurance Training</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Text Testimonial 5 - British -->
+                <div class="text-testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">Brilliant trainers who understand busy professional schedules. They designed efficient 45-minute workouts that deliver better results than my previous 2-hour gym sessions in London.</p>
+                        <div class="client-meta">
+                            <h4>Emily W.</h4>
+                            <p>British • Time-Efficient Program</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Text Testimonial 6 - American -->
+                <div class="text-testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">After relocating from Texas, I needed help getting back in shape. The trainers' motivational style and data-driven approach gave me visible results in just 8 weeks.</p>
+                        <div class="client-meta">
+                            <h4>Michael T.</h4>
+                            <p>American • Post-Relocation Program</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Text Testimonial 7 - African -->
+                <div class="text-testimonial">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">As a Nigerian athlete recovering from injury, the rehabilitation program helped me return to competition stronger than before. Their knowledge of African training styles was impressive.</p>
+                        <div class="client-meta">
+                            <h4>Amina K.</h4>
+                            <p>African • Sports Rehabilitation</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dots Navigation -->
+                <div class="slider-dots"></div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Contact Form Section Start -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p class="contact-intro">Get in touch with our team to start your fitness journey today</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Abu Dhabi, United Arab Emirates</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+971 509859515 </p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>fitnessarchitects29@gmail.com </p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Working Hours</h3>
+                            <p>Mon - Sat: 6:00 AM - 10:00 PM</p>
+                            <p>Sunday: 8:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactFormIndex" autocomplete="off">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                       
+                        <div class="phone-input-wrapper" style="display: flex; align-items: center; width: 100%;">
+                            <!-- <select id="contact-index-country-code" name="country-code" class="country-code-select" style="width: 30%; min-width: 90px; max-width: 140px; border: 1px solid #d1d5db; border-right: none; border-radius: 8px 0 0 8px; height: 48px; font-size: 1rem; font-family: inherit;">
+                                <option value="+971" selected>🇦🇪 +971</option>
+                                <option value="+1">🇺🇸 +1</option>
+                                <option value="+44">🇬🇧 +44</option>
+                                <option value="+91">🇮🇳 +91</option>
+                                <option value="+61">🇦🇺 +61</option>
+                                <option value="+81">🇯🇵 +81</option>
+                                <option value="+49">🇩🇪 +49</option>
+                                <option value="+33">🇫🇷 +33</option>
+                                <option value="+39">🇮🇹 +39</option>
+                            </select> -->
+                            <input type="tel" id="phone" name="phone" required placeholder=" " pattern="[0-9]+" inputmode="numeric" style="width: 100%; border: 1px solid #d1d5db; border-radius: 8px 8px 8px 8px; height: 48px; font-size: 1rem; padding-left: 1em;" />
+                       <label for="email">Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="service">Service Interested In</label> -->
+                        <select id="service" name="service" required>
+                        <option value="" disabled selected>Select a service</option>
+                        <option value="personal-training">Personal Training</option>
+                        <option value="online-training">Online Training</option>
+                        <option value="nutrition">Nutrition Plans</option>
+                        <option value="group-classes">Group Classes</option>
+                        <option value="crossfit">CrossFit Training</option>
+                        <option value="weightlifting">Olympic Weightlifting</option>
+                        <option value="weight-loss">Weight Loss / Fat Loss</option>
+                        <option value="rehabilitation">Rehabilitation & Recovery</option>
+                        <option value="muscle-gain">Muscle Gain</option>
+                        <option value="muscle-hypertrophy">Muscle Hypertrophy / Bodybuilding</option>
+                        <option value="group-functional">Group Functional Training</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Form Section End -->
+    <!-- Success Popup for Index -->
+    <div id="successPopupIndex" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.35);z-index:9999;align-items:center;justify-content:center;animation:fadeInPopup 0.4s;">
+        <div style="background:#fff;padding:2.5rem 2rem 2rem 2rem;border-radius:22px;box-shadow:0 12px 40px rgba(132,204,22,0.22);text-align:center;max-width:90vw;position:relative;min-width:320px;">
+            <div style="display:flex;justify-content:center;align-items:center;margin-bottom:1.2rem;">
+                <span style="display:inline-block;width:64px;height:64px;background:rgba(132,204,22,0.12);border-radius:50%;position:relative;">
+                    <svg width="40" height="40" viewBox="0 0 40 40" style="position:absolute;top:12px;left:12px;">
+                        <circle cx="20" cy="20" r="18" fill="none" stroke="#84cc16" stroke-width="3" opacity="0.2" />
+                        <polyline points="12,22 18,28 28,14" fill="none" stroke="#84cc16" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                            <animate attributeName="points" from="12,22 18,28 18,28" to="12,22 18,28 28,14" dur="0.5s" fill="freeze" />
+                        </polyline>
+                    </svg>
+                </span>
+            </div>
+            <h2 style="color:var(--secondary-color);margin-bottom:0.5rem;font-size:2rem;font-weight:800;">Success!</h2>
+            <p style="color:#374151;font-size:1.15rem;margin-bottom:1.7rem;">Thank you for reaching out.<br>We will get back to you soon.</p>
+            <button id="closePopupBtnIndex" style="background:var(--secondary-color);color:#fff;font-weight:600;padding:0.7rem 2.2rem;border-radius:30px;border:none;font-size:1.1rem;cursor:pointer;display:inline-flex;align-items:center;gap:0.7em;transition:background 0.2s,transform 0.2s;"><i class="fas fa-times"></i> Close</button>
+        </div>
+    </div>
+    <style>
+    @keyframes fadeInPopup {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    #successPopupIndex .fa-times {
+        font-size: 1.1em;
+    }
+    #closePopupBtnIndex:hover {
+        background: var(--hover-color);
+        transform: translateY(-2px) scale(1.05);
+    }
+    </style>
+    <script>
+    // Popup logic for index contact form
+    const contactFormIndex = document.getElementById('contactFormIndex');
+    const successPopupIndex = document.getElementById('successPopupIndex');
+    const closePopupBtnIndex = document.getElementById('closePopupBtnIndex');
+    if (contactFormIndex && successPopupIndex && closePopupBtnIndex) {
+        contactFormIndex.addEventListener('submit', function(e) {
+            e.preventDefault();
+            successPopupIndex.style.display = 'flex';
+            contactFormIndex.reset();
+        });
+        closePopupBtnIndex.addEventListener('click', function() {
+            successPopupIndex.style.display = 'none';
+        });
+    }
+
+    // Popup logic for home contact form
+    const homeContactForm = document.getElementById('homeContactForm');
+    if (homeContactForm && successPopupIndex) {
+        homeContactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            successPopupIndex.style.display = 'flex';
+            homeContactForm.reset();
+        });
+    }
+    </script>
+    <style>
+    /* Add this to your existing styles */
+    /* Form Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .form-animate {
+        animation: fadeIn 0.6s ease-out forwards;
+    }
+    
+    .contact-form .form-group,
+    .contact-content .form-group {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.6s ease-out forwards;
+    }
+    
+    /* Staggered animations */
+    .contact-form .form-group:nth-child(1) { animation-delay: 0.1s; }
+    .contact-form .form-group:nth-child(2) { animation-delay: 0.2s; }
+    .contact-form .form-group:nth-child(3) { animation-delay: 0.3s; }
+    .contact-form .form-group:nth-child(4) { animation-delay: 0.4s; }
+    .contact-form .form-group:nth-child(5) { animation-delay: 0.5s; }
+    .contact-form .submit-btn { animation-delay: 0.6s; }
+    
+    .contact-content .form-group:nth-child(1) { animation-delay: 0.1s; }
+    .contact-content .form-group:nth-child(2) { animation-delay: 0.2s; }
+    .contact-content .form-group:nth-child(3) { animation-delay: 0.3s; }
+    .contact-content .form-group:nth-child(4) { animation-delay: 0.4s; }
+    .contact-content .form-group:nth-child(5) { animation-delay: 0.5s; }
+    .contact-content .submit-btn { animation-delay: 0.6s; }
+</style>
+
+<script>
+// Add this script before </body>
+document.addEventListener('DOMContentLoaded', function() {
+    // Animate form sections when they come into view
+    const animateOnScroll = () => {
+        const formSections = document.querySelectorAll('.contact-form-section, .contact-content');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('form-animate');
+                    
+                    // Animate form fields
+                    const formGroups = entry.target.querySelectorAll('.form-group');
+                    formGroups.forEach((group, index) => {
+                        group.style.animationDelay = `${0.1 * (index + 1)}s`;
+                        group.style.opacity = 1;
+                        group.style.transform = 'translateY(0)';
+                    });
+                    
+                    // Animate submit button
+                    const submitBtn = entry.target.querySelector('.submit-btn');
+                    if (submitBtn) {
+                        submitBtn.style.animationDelay = `${0.1 * (formGroups.length + 1)}s`;
+                        submitBtn.style.opacity = 1;
+                        submitBtn.style.transform = 'translateY(0)';
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        formSections.forEach(section => {
+            observer.observe(section);
+        });
+    };
+    
+    animateOnScroll();
+    
+    // Re-run on resize/lazy load
+    window.addEventListener('resize', animateOnScroll);
+});
+</script>
+        
+   <!-- FAQ Section Start -->
+<section class="faq-section">
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+        <p class="faq-intro">Find answers to common questions about our services and training programs</p>
+        
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What services do you offer?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer personal training, online coaching, nutrition plans, and group classes tailored to your fitness goals in Abu Dhabi. Our certified trainers specialize in weight loss, muscle gain, and rehabilitation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do I get started?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Begin with a free consultation where we assess your fitness level and discuss goals. We'll then create a personalized plan and schedule your first session at our Abu Dhabi facility or online.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What are your training rates?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our Abu Dhabi personal training rates start from AED 250 per session, with discounts available for packages. Contact us for exact pricing based on your preferred program and trainer.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you offer online training?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we provide comprehensive online training with custom workouts, video check-ins, and nutrition guidance. Perfect for Abu Dhabi residents who prefer home workouts.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What qualifications do your trainers have?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>All trainers hold international certifications (NASM, ACE, ISSA) and specialize in areas like weight loss, bodybuilding, and injury rehabilitation. We only hire the best for our Abu Dhabi clients.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Can I train with a specific trainer?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! We'll match you with the perfect Abu Dhabi trainer based on your goals and personality during your free consultation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What if I have an injury or health condition?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our Abu Dhabi trainers specialize in rehabilitation and will create a safe, customized program in coordination with your healthcare provider.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you offer nutrition guidance?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we provide personalized nutrition plans using locally available foods in Abu Dhabi, along with restaurant guides and supplement advice.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FAQ Section End -->
+        
+    </main>
+    <!-- Footer Section Start -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Footer Top Section -->
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="images/logow.png" alt="Fitness Architects Logo" class="footer-logo">
+                    <p class="footer-description">Building stronger bodies and stronger communities through personalized fitness solutions.</p>
+                    
+                    <div class="footer-social">
+                        <h3 class="social-title">Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-nav">
+                        <li><a href="trainers.html" class="footer-link">Our Trainers</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="personal-training.html" class="footer-link">Personal Training</a></li>
+                        <li><a href="blog.html" class="footer-link">Blog</a></li>
+                        <li><a href="bmi-calculator.html" class="footer-link">BMI Calculator</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services">
+                    <h3 class="footer-heading">Our Services</h3>
+                    <ul class="footer-nav">
+                        <li><a href="personal-training.html" class="footer-link">Personal Training</a></li>
+                        <li><a href="online-training.html" class="footer-link">Online Training</a></li>
+                        <li><a href="nutrition-plans.html" class="footer-link">Nutrition Plans</a></li>
+                        <li><a href="group-classes.html" class="footer-link">Group Classes</a></li>
+                        <li><a href="crossfit-training.html" class="footer-link">CrossFit Training</a></li>
+                        <li><a href="crossfit-training.html" class="footer-link">Olympics weightlifting</a></li>
+                        <li><a href="crossfit-training.html" class="footer-link">fat loss</a></li>
+                        <li><a href="crossfit-training.html" class="footer-link">Rehabilitation</a></li>                                     
+                        <li><a href="rehabilitation.html" class="footer-link">Muscle gain</a></li>
+                        <li><a href="rehabilitation.html" class="footer-link">Bodybuilding</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3 class="footer-heading">Contact Info</h3>
+                    <ul class="contact-info">
+                        <li class="contact-item">
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <span>Dubai, United Arab Emirates</span>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fas fa-phone-alt contact-icon"></i>
+                            <a href="tel:+971505789033">+971 509859515 </a>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <a href="mailto:info@fitnessarchitects.ae">fitnessarchitects29@gmail.com </a>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fas fa-clock contact-icon"></i>
+                            <div>
+                                <span>Mon - Sat: 6:00 AM - 10:00 PM</span>
+                                <span>Sunday: 8:00 AM - 8:00 PM</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">&copy; <span id="current-year"></span> Fitness Architects. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="privacy.html" class="legal-link">Privacy Policy</a>
+                        <a href="terms.html" class="legal-link">Terms of Service</a>
+                        <a href="sitemap.html" class="legal-link">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+    <!-- Footer Section End -->
+        
+    <!-- Your page content will go here -->
+    <script src="main.js"></script>
+    
+    <!-- Contact Form Popup -->
+    <div id="consultationPopup" class="consultation-popup" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.7); z-index: 9999; align-items: center; justify-content: center; animation: fadeInPopup 0.4s ease-out;">
+        <div class="popup-content" style="background: #fff; padding: 2.5rem; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); max-width: 500px; width: 90%; position: relative; animation: slideInPopup 0.5s ease-out;">
+            <button id="closePopupBtn" class="close-btn" style="position: absolute; top: 15px; right: 20px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #666; transition: color 0.2s;">&times;</button>
+            
+            <div class="popup-header" style="text-align: center; margin-bottom: 2rem;">
+                <h2 style="color: #84cc16; font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem;">Book Your Free Consultation</h2>
+                <p style="color: #666; font-size: 1rem;">Get started on your fitness journey today!</p>
+            </div>
+            
+           <style>
+                .form-group {
+                    position: relative;
+                    margin-bottom: 1.5rem;
+                }
+
+                .form-group input,
+                .form-group textarea,
+                .form-group select {
+                    width: 100%;
+                    padding: 1rem 1rem 0.5rem 1rem;
+                    border: 1px solid #ddd;
+                    border-radius: 8px;
+                    font-size: 1rem;
+                    transition: border-color 0.2s;
+                    background: transparent;
+                }
+
+                .form-group label {
+                    position: absolute;
+                    left: 1rem;
+                    top: 1rem;
+                    color: #999;
+                    background: #fff;
+                    padding: 0 0.25rem;
+                    transition: 0.2s ease all;
+                    pointer-events: none;
+                }
+
+                .form-group input:focus + label,
+                .form-group input:not(:placeholder-shown) + label,
+                .form-group textarea:focus + label,
+                .form-group textarea:not(:placeholder-shown) + label {
+                    top: -0.6rem;
+                    left: 0.8rem;
+                    font-size: 0.75rem;
+                    color: #84cc16;
+                }   
+            </style>
+
+            <form id="consultationForm" class="consultation-form">
+                <div class="form-group">
+                    <input type="text" id="popup-name" name="name" required placeholder=" " />
+                    <label for="popup-name">Full name *</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="popup-email" name="email" required placeholder=" " />
+                    <label for="popup-email">Email *</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" id="popup-phone" name="phone" required placeholder=" " pattern="[0-9]+" inputmode="numeric" />
+                    <label for="popup-phone">Phone Number *</label>
+                </div>
+
+                <div class="form-group">
+                    <select id="popup-service" name="service" required>
+                        <option value="" disabled selected>Select a service</option>
+                        <option value="personal-training">Personal Training</option>
+                        <option value="online-training">Online Training</option>
+                        <option value="nutrition">Nutrition Plans</option>
+                        <option value="group-classes">Group Classes</option>
+                        <option value="crossfit">CrossFit Training</option>
+                        <option value="weightlifting">Olympic Weightlifting</option>
+                        <option value="weight-loss">Weight Loss / Fat Loss</option>
+                        <option value="rehabilitation">Rehabilitation & Recovery</option>
+                        <option value="muscle-gain">Muscle Gain</option>
+                        <option value="muscle-hypertrophy">Muscle Hypertrophy / Bodybuilding</option>
+                        <option value="group-functional">Group Functional Training</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="popup-message" name="message" rows="3" placeholder="Tell us about your fitness goals..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Book Free Consultation</button>
+            </form>
+
+            
+            <div id="popupSuccessMessage" class="success-message" style="display: none; text-align: center; color: #10b981; font-weight: 600; margin-top: 1rem;">
+                <i class="fas fa-check-circle"></i> Thank you! We'll contact you soon.
+            </div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes fadeInPopup {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideInPopup {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .consultation-popup .form-group {
+            position: relative;
+        }
+        
+        .consultation-popup input:focus,
+        .consultation-popup select:focus,
+        .consultation-popup textarea:focus {
+            outline: none;
+            border-color: #84cc16;
+        }
+        
+        .consultation-popup input:focus + label,
+        .consultation-popup input:not(:placeholder-shown) + label {
+            top: -0.7rem;
+            left: 0.75rem;
+            font-size: 0.8rem;
+            color: #84cc16;
+            background-color: white;
+        }
+        
+        .consultation-popup .submit-btn:hover {
+            background: #65a30d;
+            transform: translateY(-2px);
+        }
+        
+        .close-btn:hover {
+            color: #333;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // Consultation popup functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const popup = document.getElementById('consultationPopup');
+            const closeBtn = document.getElementById('closePopupBtn');
+            const form = document.getElementById('consultationForm');
+            const successMessage = document.getElementById('popupSuccessMessage');
+            
+            // Show popup after 10 seconds
+            setTimeout(() => {
+                if (popup) {
+                    popup.style.display = 'flex';
+                }
+            }, 10000);
+            
+            // Close popup when clicking close button
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    popup.style.display = 'none';
+                });
+            }
+            
+            // Close popup when clicking outside
+            if (popup) {
+                popup.addEventListener('click', function(e) {
+                    if (e.target === popup) {
+                        popup.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Handle form submission
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Show success message
+                    if (successMessage) {
+                        successMessage.style.display = 'block';
+                    }
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Hide popup after 3 seconds
+                    setTimeout(() => {
+                        popup.style.display = 'none';
+                        if (successMessage) {
+                            successMessage.style.display = 'none';
+                        }
+                    }, 3000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

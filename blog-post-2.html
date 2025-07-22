@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Fundamentals: Building a Strong Foundation for Your Fitness Goals | Fitness Architects</title>
+    <link rel="icon" type="image/png" href="images/logoicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f8fafc;
+            line-height: 1.7;
+        }
+        .main-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+        .breadcrumb {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #fff;
+            padding: 0.5rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .breadcrumb a {
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+            color: #374151;
+        }
+        .breadcrumb a:hover {
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        .breadcrumb .separator {
+            color: #d1d5db;
+        }
+        
+        .blog-post {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            margin-bottom: 3rem;
+        }
+        
+        .blog-header {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+        
+        .blog-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .blog-header-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 3rem 2rem 2rem;
+            color: white;
+        }
+        
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .blog-category {
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        
+        .blog-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .blog-content {
+            padding: 3rem 2rem;
+        }
+        
+        .blog-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 2rem 0 1rem;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            color: #4b5563;
+            font-size: 1.1rem;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.5rem;
+            color: #4b5563;
+        }
+        
+        .ai-summary-section {
+            background: #f0fdf4;
+            border: 2px solid var(--secondary-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .ai-summary-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .ai-summary-header i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .ai-summary-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        .ai-summary-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary-color);
+            display: none;
+        }
+        
+        .ai-summary-content.show {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        .ai-summary-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .ai-summary-btn:hover {
+            background: #65a30d;
+            transform: translateY(-2px);
+        }
+        
+        .ai-summary-btn.loading {
+            pointer-events: none;
+            opacity: 0.7;
+        }
+        
+        .ai-summary-btn.loading::after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border: 2px solid transparent;
+            border-top: 2px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--secondary-color);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-blog:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+            .blog-content {
+                padding: 2rem 1.5rem;
+            }
+            .blog-header {
+                height: 300px;
+            }
+            .blog-header-overlay {
+                padding: 2rem 1.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="top-bar-container">
+                <div class="top-bar-left">
+                    <span>Make your life better. Call us <a href="tel:+971505789033">+971 50 578 9033</a></span>
+                </div>
+                <div class="top-bar-center">
+                    <span>Start your <strong>FITNESS JOURNEY</strong> today!</span>
+                </div>
+                <div class="top-bar-right">
+                    <span>Follow us</span>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="/" class="logo">
+                    <img src="images/logo.png" alt="Fitness Architects Logo" style="height:64px; width:auto; display:block;" />
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trainers.html">Our Trainers</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="fas fa-caret-down" style="font-size:0.9em;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="personal-training.html">Personal Training</a></li>
+                            <li><a href="online-training.html">Online Training</a></li>
+                            <li><a href="nutrition-plans.html">Nutrition Plans</a></li>
+                            <li><a href="group-classes.html">Group Classes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="bmi-calculator.html">BMI Calculator</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="cta-btn">Hire Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="separator">/</span>
+            <a href="blog.html">Blog</a>
+            <span class="separator">/</span>
+            <span class="current-page">Nutrition Fundamentals</span>
+        </div>
+        
+        <article class="blog-post">
+            <div class="blog-header">
+                <img src="images/diet.jpg" alt="Nutrition Fundamentals">
+                <div class="blog-header-overlay">
+                    <div class="blog-meta">
+                        <span class="blog-category">Nutrition</span>
+                        <span><i class="far fa-calendar-alt"></i> January 12, 2024</span>
+                        <span><i class="far fa-clock"></i> 10 min read</span>
+                    </div>
+                    <h1 class="blog-title">Nutrition Fundamentals: Building a Strong Foundation for Your Fitness Goals</h1>
+                </div>
+            </div>
+            
+            <div class="blog-content">
+                <p>Nutrition is the cornerstone of any successful fitness journey. Whether your goal is weight loss, muscle gain, improved performance, or overall health, understanding the fundamentals of nutrition is essential for achieving sustainable results. This comprehensive guide will walk you through the essential principles of nutrition and how to apply them to support your fitness goals.</p>
+                
+                <h2>Understanding Macronutrients: The Building Blocks of Nutrition</h2>
+                <p>Macronutrients are the three main categories of nutrients that provide energy and are required in large amounts: proteins, carbohydrates, and fats. Each plays a crucial role in your body's function and your fitness goals.</p>
+                
+                <h3>Protein: The Building Block of Muscle</h3>
+                <p>Protein is essential for building and repairing muscle tissue, supporting immune function, and maintaining overall health. For fitness enthusiasts, adequate protein intake is crucial for:</p>
+                <ul>
+                    <li>Muscle growth and repair after exercise</li>
+                    <li>Preserving lean muscle mass during weight loss</li>
+                    <li>Supporting recovery and reducing muscle soreness</li>
+                    <li>Providing satiety and helping control hunger</li>
+                </ul>
+                
+                <p><strong>Recommended Intake:</strong> 1.6-2.2 grams per kilogram of body weight daily for active individuals</p>
+                
+                <p><strong>Best Sources:</strong></p>
+                <ul>
+                    <li>Lean meats (chicken, turkey, lean beef)</li>
+                    <li>Fish and seafood</li>
+                    <li>Eggs and dairy products</li>
+                    <li>Legumes and beans</li>
+                    <li>Plant-based proteins (tofu, tempeh, quinoa)</li>
+                </ul>
+                
+                <h3>Carbohydrates: Your Body's Preferred Energy Source</h3>
+                <p>Carbohydrates are your body's primary energy source, especially important for high-intensity exercise and brain function. They play a vital role in:</p>
+                <ul>
+                    <li>Providing energy for workouts and daily activities</li>
+                    <li>Supporting brain function and mental clarity</li>
+                    <li>Preserving muscle glycogen for exercise performance</li>
+                    <li>Supporting recovery after intense training</li>
+                </ul>
+                
+                <p><strong>Types of Carbohydrates:</strong></p>
+                <ul>
+                    <li><strong>Complex Carbohydrates:</strong> Whole grains, fruits, vegetables, legumes</li>
+                    <li><strong>Simple Carbohydrates:</strong> Refined sugars, processed foods</li>
+                </ul>
+                
+                <p><strong>Recommended Intake:</strong> 45-65% of total daily calories, with focus on complex carbohydrates</p>
+                
+                <h3>Fats: Essential for Health and Performance</h3>
+                <p>Fats are essential for hormone production, nutrient absorption, and overall health. They support:</p>
+                <ul>
+                    <li>Hormone production (testosterone, estrogen, cortisol)</li>
+                    <li>Absorption of fat-soluble vitamins (A, D, E, K)</li>
+                    <li>Brain health and cognitive function</li>
+                    <li>Long-lasting energy for endurance activities</li>
+                </ul>
+                
+                <p><strong>Types of Fats:</strong></p>
+                <ul>
+                    <li><strong>Healthy Fats:</strong> Avocados, nuts, seeds, olive oil, fatty fish</li>
+                    <li><strong>Saturated Fats:</strong> Should be limited (red meat, butter, cheese)</li>
+                    <li><strong>Trans Fats:</strong> Should be avoided (processed foods, fried foods)</li>
+                </ul>
+                
+                <p><strong>Recommended Intake:</strong> 20-35% of total daily calories, primarily from healthy sources</p>
+                
+                <h2>Micronutrients: The Supporting Cast</h2>
+                <p>While macronutrients provide energy, micronutrients (vitamins and minerals) are essential for countless bodily functions and optimal performance.</p>
+                
+                <h3>Key Vitamins for Fitness</h3>
+                <ul>
+                    <li><strong>Vitamin D:</strong> Supports bone health, muscle function, and immune system</li>
+                    <li><strong>B Vitamins:</strong> Essential for energy production and metabolism</li>
+                    <li><strong>Vitamin C:</strong> Supports immune function and collagen production</li>
+                    <li><strong>Vitamin E:</strong> Antioxidant that helps with recovery</li>
+                </ul>
+                
+                <h3>Essential Minerals</h3>
+                <ul>
+                    <li><strong>Iron:</strong> Critical for oxygen transport and energy production</li>
+                    <li><strong>Calcium:</strong> Essential for bone health and muscle function</li>
+                    <li><strong>Magnesium:</strong> Supports muscle relaxation and recovery</li>
+                    <li><strong>Zinc:</strong> Important for immune function and protein synthesis</li>
+                </ul>
+                
+                <h2>Meal Timing and Frequency</h2>
+                <p>When you eat can be just as important as what you eat, especially for fitness goals.</p>
+                
+                <h3>Pre-Workout Nutrition</h3>
+                <p>Eating before exercise provides the energy needed for optimal performance:</p>
+                <ul>
+                    <li><strong>2-3 hours before:</strong> Balanced meal with protein, carbs, and fats</li>
+                    <li><strong>30-60 minutes before:</strong> Light snack with easily digestible carbohydrates</li>
+                    <li><strong>Focus on:</strong> Complex carbohydrates for sustained energy</li>
+                </ul>
+                
+                <h3>Post-Workout Nutrition</h3>
+                <p>The post-workout window is crucial for recovery and muscle growth:</p>
+                <ul>
+                    <li><strong>Within 30 minutes:</strong> Protein and carbohydrates to support recovery</li>
+                    <li><strong>Protein:</strong> 20-30 grams to stimulate muscle protein synthesis</li>
+                    <li><strong>Carbohydrates:</strong> 1-1.2 grams per kilogram body weight to replenish glycogen</li>
+                </ul>
+                
+                <h3>Meal Frequency</h3>
+                <p>While meal frequency is largely personal preference, some guidelines include:</p>
+                <ul>
+                    <li><strong>3-6 meals per day:</strong> Depending on schedule and preferences</li>
+                    <li><strong>Consistent timing:</strong> Helps regulate hunger and energy levels</li>
+                    <li><strong>Protein distribution:</strong> Spread protein intake throughout the day</li>
+                </ul>
+                
+                <h2>Hydration: The Often Overlooked Essential</h2>
+                <p>Proper hydration is crucial for performance, recovery, and overall health.</p>
+                
+                <h3>Daily Hydration Needs</h3>
+                <ul>
+                    <li><strong>General guideline:</strong> 8-10 glasses of water daily</li>
+                    <li><strong>Active individuals:</strong> Additional 16-20 ounces per hour of exercise</li>
+                    <li><strong>Climate considerations:</strong> Increase intake in hot/humid conditions</li>
+                </ul>
+                
+                <h3>Signs of Dehydration</h3>
+                <ul>
+                    <li>Dark yellow urine</li>
+                    <li>Thirst and dry mouth</li>
+                    <li>Fatigue and decreased performance</li>
+                    <li>Headaches and dizziness</li>
+                </ul>
+                
+                <h2>Creating a Balanced Meal Plan</h2>
+                <p>A balanced meal plan should include all macronutrients and be tailored to your specific goals and lifestyle.</p>
+                
+                <h3>Plate Method for Balanced Meals</h3>
+                <ul>
+                    <li><strong>50% Vegetables:</strong> Non-starchy vegetables for fiber and nutrients</li>
+                    <li><strong>25% Protein:</strong> Lean protein sources</li>
+                    <li><strong>25% Carbohydrates:</strong> Whole grains, starchy vegetables, or fruits</li>
+                    <li><strong>Healthy Fats:</strong> Small amounts of healthy fats</li>
+                </ul>
+                
+                <h3>Sample Meal Structure</h3>
+                <p><strong>Breakfast:</strong> Protein + Complex Carbohydrates + Healthy Fats</p>
+                <p><strong>Lunch:</strong> Protein + Vegetables + Complex Carbohydrates</p>
+                <p><strong>Dinner:</strong> Protein + Vegetables + Small amount of carbohydrates</p>
+                <p><strong>Snacks:</strong> Protein + Fiber (fruits, vegetables, nuts)</p>
+                
+                <h2>Nutrition for Specific Fitness Goals</h2>
+                
+                <h3>Weight Loss</h3>
+                <ul>
+                    <li>Create a moderate caloric deficit (500-750 calories daily)</li>
+                    <li>Increase protein intake to preserve muscle mass</li>
+                    <li>Focus on high-fiber, low-calorie foods</li>
+                    <li>Limit processed foods and added sugars</li>
+                </ul>
+                
+                <h3>Muscle Gain</h3>
+                <ul>
+                    <li>Consume a slight caloric surplus (200-500 calories daily)</li>
+                    <li>Prioritize protein intake (1.6-2.2g/kg body weight)</li>
+                    <li>Include adequate carbohydrates for energy and recovery</li>
+                    <li>Time protein intake around workouts</li>
+                </ul>
+                
+                <h3>Performance Enhancement</h3>
+                <ul>
+                    <li>Focus on adequate carbohydrate intake for energy</li>
+                    <li>Ensure proper hydration before, during, and after exercise</li>
+                    <li>Include electrolytes for longer workouts</li>
+                    <li>Optimize meal timing around training sessions</li>
+                </ul>
+                
+                <h2>Common Nutrition Myths Debunked</h2>
+                
+                <h3>Myth 1: "Carbs Make You Fat"</h3>
+                <p>Carbohydrates don't inherently cause weight gain. Excess calories from any macronutrient can lead to weight gain. The key is choosing quality carbohydrates and managing portion sizes.</p>
+                
+                <h3>Myth 2: "Eating Late Causes Weight Gain"</h3>
+                <p>Weight gain is determined by total daily caloric intake, not the timing of meals. However, late-night eating may interfere with sleep quality.</p>
+                
+                <h3>Myth 3: "Protein Shakes Are Essential"</h3>
+                <p>While protein shakes can be convenient, they're not necessary. Whole food sources of protein are equally effective and often more nutritious.</p>
+                
+                <h3>Myth 4: "Fat-Free Foods Are Healthier"</h3>
+                <p>Fat-free foods often contain added sugars and artificial ingredients to compensate for flavor. Healthy fats are essential for health and satiety.</p>
+                
+                <h2>Practical Tips for Success</h2>
+                
+                <h3>1. Start with Small Changes</h3>
+                <p>Don't try to overhaul your entire diet at once. Start with one or two changes and build from there.</p>
+                
+                <h3>2. Plan and Prepare</h3>
+                <p>Meal planning and preparation can help you make healthier choices and avoid impulse eating.</p>
+                
+                <h3>3. Listen to Your Body</h3>
+                <p>Pay attention to hunger and fullness cues, energy levels, and how different foods make you feel.</p>
+                
+                <h3>4. Be Consistent, Not Perfect</h3>
+                <p>Focus on consistency over perfection. Occasional indulgences are part of a sustainable approach to nutrition.</p>
+                
+                <h3>5. Seek Professional Guidance</h3>
+                <p>Consider working with a registered dietitian or nutritionist for personalized guidance, especially if you have specific health concerns or goals.</p>
+                
+                <h2>Tracking and Monitoring Progress</h2>
+                <p>Monitoring your nutrition can help you identify patterns and make necessary adjustments.</p>
+                
+                <h3>Methods for Tracking</h3>
+                <ul>
+                    <li><strong>Food Journaling:</strong> Record what you eat and how you feel</li>
+                    <li><strong>Nutrition Apps:</strong> Track macronutrients and calories</li>
+                    <li><strong>Progress Photos:</strong> Visual documentation of changes</li>
+                    <li><strong>Body Measurements:</strong> Track changes beyond the scale</li>
+                </ul>
+                
+                <h2>Conclusion</h2>
+                <p>Understanding nutrition fundamentals is essential for achieving your fitness goals. By focusing on quality macronutrients, proper meal timing, adequate hydration, and consistency, you can create a solid foundation for success.</p>
+                
+                <p>Remember that nutrition is highly individual, and what works for one person may not work for another. Be patient with yourself, make gradual changes, and focus on building sustainable habits that support your long-term health and fitness goals.</p>
+                
+                <p>The key to success is not perfection but consistency. Small, sustainable changes over time will lead to lasting results and improved overall health and performance.</p>
+                
+                <div class="ai-summary-section">
+                    <div class="ai-summary-header">
+                        <i class="fas fa-robot"></i>
+                        <h3 class="ai-summary-title">AI Summary</h3>
+                    </div>
+                    <button class="ai-summary-btn" onclick="generateAISummary()">
+                        <i class="fas fa-magic"></i>
+                        Generate AI Summary
+                    </button>
+                    <div class="ai-summary-content" id="aiSummary">
+                        <h4>Key Points Summary:</h4>
+                        <ul>
+                            <li><strong>Macronutrients:</strong> Protein (1.6-2.2g/kg), carbs (45-65% calories), healthy fats (20-35% calories) are essential building blocks.</li>
+                            <li><strong>Protein Sources:</strong> Lean meats, fish, eggs, legumes, plant-based proteins for muscle growth and repair.</li>
+                            <li><strong>Carbohydrate Types:</strong> Focus on complex carbs (whole grains, fruits, vegetables) over simple sugars.</li>
+                            <li><strong>Healthy Fats:</strong> Avocados, nuts, seeds, olive oil, fatty fish for hormone production and nutrient absorption.</li>
+                            <li><strong>Meal Timing:</strong> Pre-workout (2-3 hours), post-workout (within 30 minutes), consistent meal frequency.</li>
+                            <li><strong>Hydration:</strong> 8-10 glasses daily, plus 16-20oz per hour of exercise, watch for dehydration signs.</li>
+                            <li><strong>Goal-Specific Nutrition:</strong> Weight loss (caloric deficit), muscle gain (surplus + protein), performance (adequate carbs + timing).</li>
+                            <li><strong>Practical Tips:</strong> Start small, plan meals, listen to body, be consistent not perfect, seek professional guidance.</li>
+                        </ul>
+                        <p><strong>Bottom Line:</strong> Nutrition fundamentals focus on balanced macronutrients, proper meal timing, adequate hydration, and consistency. Quality whole foods, appropriate portions, and sustainable habits form the foundation for achieving fitness goals.</p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="blog.html" class="back-to-blog">
+                        <i class="fas fa-arrow-left"></i>
+                        Back to Blog
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <!-- Footer Top Section -->
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="images/logow.png" alt="Fitness Architects Logo" class="footer-logo">
+                <p class="footer-description">Building stronger bodies and stronger communities through personalized fitness solutions.</p>
+                
+                <div class="footer-social">
+                    <h3 class="social-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-nav">
+                    <li><a href="trainers.html" class="footer-link">Our Trainers</a></li>
+                    <li><a href="services.html" class="footer-link">Services</a></li>
+                    <li><a href="personal-training.html" class="footer-link">Personal Training</a></li>
+                    <li><a href="blog.html" class="footer-link">Blog</a></li>
+                    <li><a href="bmi-calculator.html" class="footer-link">BMI Calculator</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-services">
+                <h3 class="footer-heading">Our Services</h3>
+                <ul class="footer-nav">
+                    <li><a href="personal-training.html" class="footer-link">Personal Training</a></li>
+                    <li><a href="online-training.html" class="footer-link">Online Training</a></li>
+                    <li><a href="nutrition-plans.html" class="footer-link">Nutrition Plans</a></li>
+                    <li><a href="group-classes.html" class="footer-link">Group Classes</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">CrossFit Training</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">Olympics weightlifting</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">fat loss</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">Rehabilitation</a></li>                                     
+                    <li><a href="rehabilitation.html" class="footer-link">Muscle gain</a></li>
+                    <li><a href="rehabilitation.html" class="footer-link">Bodybuilding</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3 class="footer-heading">Contact Info</h3>
+                <ul class="contact-info">
+                    <li class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <span>Dubai, United Arab Emirates</span>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-phone-alt contact-icon"></i>
+                        <a href="tel:+971505789033">+971 509859515 </a>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <a href="mailto:info@fitnessarchitects.ae">fitnessarchitects29@gmail.com </a>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-clock contact-icon"></i>
+                        <div>
+                            <span>Mon - Sat: 6:00 AM - 10:00 PM</span>
+                            <span>Sunday: 8:00 AM - 8:00 PM</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p class="copyright">&copy; <span id="current-year"></span> Fitness Architects. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html" class="legal-link">Privacy Policy</a>
+                    <a href="terms.html" class="legal-link">Terms of Service</a>
+                    <a href="sitemap.html" class="legal-link">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</footer>
+    <script src="main.js"></script>
+
+    <script>
+        function generateAISummary() {
+            const button = document.querySelector('.ai-summary-btn');
+            const summary = document.getElementById('aiSummary');
+            
+            // Add loading state
+            button.classList.add('loading');
+            button.innerHTML = '<i class="fas fa-spinner"></i> Generating Summary...';
+            
+            // Simulate AI processing time
+            setTimeout(() => {
+                // Remove loading state
+                button.classList.remove('loading');
+                button.innerHTML = '<i class="fas fa-check"></i> Summary Generated';
+                
+                // Show the summary
+                summary.classList.add('show');
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    button.innerHTML = '<i class="fas fa-magic"></i> Generate AI Summary';
+                }, 3000);
+            }, 2000);
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Classes | Fitness Architects</title>
+    <link rel="icon" type="image/png" href="images/logoicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="top-bar">
+            <div class="top-bar-container">
+                <div class="top-bar-left">
+                    <span>Make your life better. Call us <a href="tel:+971505789033">+971 50 578 9033</a></span>
+                </div>
+                <div class="top-bar-center">
+                    <span>Start your <strong>FITNESS JOURNEY</strong> today!</span>
+                </div>
+                <div class="top-bar-right">
+                    <span>Follow us</span>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="/" class="logo"><img src="images/logo.png" alt="Fitness Architects Logo" style="height:64px;width:auto;display:block;" /></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="trainers.html">Our Trainers</a></li>
+                    <li class="dropdown">
+                        <a href="services.html">Services <i class="fas fa-caret-down" style="font-size:0.9em;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="personal-training.html">Personal Training</a></li>
+                            <li><a href="online-training.html">Online Training</a></li>
+                            <li><a href="nutrition-plans.html">Nutrition Plans</a></li>
+                            <li><a href="group-classes.html">Group Classes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="bmi-calculator.html">BMI Calculator</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="cta-btn">Hire Us</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="breadcrumb" style="display:inline-flex;align-items:center;gap:0.5rem;background-color:rgba(255,255,255,0.95);padding:0.5rem;border-radius:12px;font-size:0.9rem;margin:40px 24px 2rem 24px;border:1px solid #e5e7eb;box-shadow:0 1px 3px rgba(0,0,0,0.05);backdrop-filter:blur(10px);">
+            <a href="index.html" style="text-decoration:none;font-weight:500;padding:0.5rem 1rem;border-radius:8px;transition:all 0.2s;color:#374151;">Home</a>
+            <span class="separator" style="color:#d1d5db;">/</span>
+            <a href="services.html" style="text-decoration:none;font-weight:500;padding:0.5rem 1rem;border-radius:8px;transition:all 0.2s;color:#374151;">Services</a>
+            <span class="separator" style="color:#d1d5db;">/</span>
+            <span class="current-page" style="font-weight:600;padding:0.5rem 1rem;border-radius:8px;color:#84cc16;background-color:#f0fdf4;">Group Classes</span>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero-section" style="background:linear-gradient(135deg,rgba(132,204,22,0.1),rgba(101,163,13,0.1));padding:4rem 2rem;text-align:center;margin:0 24px 4rem 24px;border-radius:24px;">
+            <h1 style="font-size:3.5rem;font-weight:800;color:#14532d;margin-bottom:1.5rem;letter-spacing:2px;">GROUP CLASSES</h1>
+            <p style="font-size:1.3rem;color:#374151;max-width:800px;margin:0 auto 2rem auto;line-height:1.6;">Join our energetic community and experience the power of group motivation with our diverse range of fitness classes.</p>
+            <a href="contact.html" style="display:inline-block;background:linear-gradient(135deg,#84cc16,#65a30d);color:#fff;font-weight:700;padding:1.2rem 3rem;border-radius:12px;text-decoration:none;font-size:1.1rem;transition:all 0.3s ease;box-shadow:0 4px 15px rgba(132,204,22,0.3);" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(132,204,22,0.4)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 15px rgba(132,204,22,0.3)'">Join a Class</a>
+        </section>
+
+        <!-- Group Class Categories Section -->
+        <section class="group-class-categories" style="max-width:1200px;margin:0 auto 4rem auto;padding:0 24px;">
+            <h2 style="font-size:2.2rem;font-weight:800;color:#14532d;text-align:center;margin-bottom:2rem;">Group Class Categories</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;">
+                <div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <i class="fas fa-fire" style="font-size:3rem;color:#84cc16;margin-bottom:1rem;"></i>
+                    <h3 style="font-size:1.4rem;font-weight:700;color:#14532d;margin-bottom:1rem;">High-Intensity Classes</h3>
+                    <p style="color:#6b7280;line-height:1.6;">HIIT, CrossFit, and circuit training for maximum calorie burn and conditioning.</p>
+                </div>
+                <div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <i class="fas fa-heart" style="font-size:3rem;color:#84cc16;margin-bottom:1rem;"></i>
+                    <h3 style="font-size:1.4rem;font-weight:700;color:#14532d;margin-bottom:1rem;">Cardio Classes</h3>
+                    <p style="color:#6b7280;line-height:1.6;">Spinning, Zumba, boxing fitness, and kickboxing for cardiovascular health.</p>
+                </div>
+                <div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <i class="fas fa-leaf" style="font-size:3rem;color:#84cc16;margin-bottom:1rem;"></i>
+                    <h3 style="font-size:1.4rem;font-weight:700;color:#14532d;margin-bottom:1rem;">Mind & Body</h3>
+                    <p style="color:#6b7280;line-height:1.6;">Yoga, Pilates, meditation, and stretching for flexibility and mental wellness.</p>
+                </div>
+                <div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <i class="fas fa-dumbbell" style="font-size:3rem;color:#84cc16;margin-bottom:1rem;"></i>
+                    <h3 style="font-size:1.4rem;font-weight:700;color:#14532d;margin-bottom:1rem;">Strength Training</h3>
+                    <p style="color:#6b7280;line-height:1.6;">Body Pump, functional training, core focus, and bootcamp for muscle building.</p>
+                </div>
+                <div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <i class="fas fa-users" style="font-size:3rem;color:#84cc16;margin-bottom:1rem;"></i>
+                    <h3 style="font-size:1.4rem;font-weight:700;color:#14532d;margin-bottom:1rem;">Functional Training</h3>
+                    <p style="color:#6b7280;line-height:1.6;">Group functional training with movements that improve daily life activities.</p>
+                </div>
+                <div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <i class="fas fa-star" style="font-size:3rem;color:#84cc16;margin-bottom:1rem;"></i>
+                    <h3 style="font-size:1.4rem;font-weight:700;color:#14532d;margin-bottom:1rem;">Specialty Classes</h3>
+                    <p style="color:#6b7280;line-height:1.6;">Specialized classes for specific goals like weight loss, muscle gain, and recovery.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" style="max-width:1200px;margin:0 auto 4rem auto;padding:0 24px;">
+            <h2 style="font-size:2rem;font-weight:800;color:#14532d;text-align:center;margin-bottom:2rem;">Benefits</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;">
+                <div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <i class="fas fa-user-friends" style="font-size:3rem;color:#84cc16;margin-bottom:1rem;"></i>
+                    <h3 style="font-size:1.4rem;font-weight:700;color:#14532d;margin-bottom:1rem;">One-on-One Sessions</h3>
+                    <p style="color:#6b7280;line-height:1.6;">Get undivided attention from certified personal trainers who focus solely on your progress and goals.</p>
+                </div>
+                <div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <i class="fas fa-clipboard-list" style="font-size:3rem;color:#84cc16;margin-bottom:1rem;"></i>
+                    <h3 style="font-size:1.4rem;font-weight:700;color:#14532d;margin-bottom:1rem;">Customized Programs</h3>
+                    <p style="color:#6b7280;line-height:1.6;">Tailored workout plans designed around your fitness level, goals, and any physical limitations.</p>
+                </div>
+                <div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <i class="fas fa-chart-line" style="font-size:3rem;color:#84cc16;margin-bottom:1rem;"></i>
+                    <h3 style="font-size:1.4rem;font-weight:700;color:#14532d;margin-bottom:1rem;">Progress Tracking</h3>
+                    <p style="color:#6b7280;line-height:1.6;">Regular assessments and progress monitoring to ensure you're on track to achieve your goals.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Class Types Section -->
+        <section class="class-types" style="max-width:1200px;margin:0 auto 4rem auto;padding:0 24px;">
+            <h2 style="font-size:2.5rem;font-weight:800;color:#14532d;text-align:center;margin-bottom:3rem;">Our Class Types</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;">
+                <div style="background:#f0fdf4;padding:2rem;border-radius:16px;border-left:4px solid #84cc16;">
+                    <h3 style="font-size:1.3rem;font-weight:700;color:#14532d;margin-bottom:1rem;"><i class="fas fa-fire" style="color:#84cc16;margin-right:0.5rem;"></i>High-Intensity Training</h3>
+                    <ul style="color:#374151;line-height:1.8;padding-left:1rem;">
+                        <li>HIIT Workouts</li>
+                        <li>CrossFit Classes</li>
+                        <li>Circuit Training</li>
+                        <li>Tabata Sessions</li>
+                    </ul>
+                </div>
+                <div style="background:#f0fdf4;padding:2rem;border-radius:16px;border-left:4px solid #84cc16;">
+                    <h3 style="font-size:1.3rem;font-weight:700;color:#14532d;margin-bottom:1rem;"><i class="fas fa-heart" style="color:#84cc16;margin-right:0.5rem;"></i>Cardio Classes</h3>
+                    <ul style="color:#374151;line-height:1.8;padding-left:1rem;">
+                        <li>Spinning Classes</li>
+                        <li>Zumba Dance</li>
+                        <li>Boxing Fitness</li>
+                        <li>Kickboxing</li>
+                    </ul>
+                </div>
+                <div style="background:#f0fdf4;padding:2rem;border-radius:16px;border-left:4px solid #84cc16;">
+                    <h3 style="font-size:1.3rem;font-weight:700;color:#14532d;margin-bottom:1rem;"><i class="fas fa-leaf" style="color:#84cc16;margin-right:0.5rem;"></i>Mind & Body</h3>
+                    <ul style="color:#374151;line-height:1.8;padding-left:1rem;">
+                        <li>Yoga Classes</li>
+                        <li>Pilates Sessions</li>
+                        <li>Meditation</li>
+                        <li>Stretching</li>
+                    </ul>
+                </div>
+                <div style="background:#f0fdf4;padding:2rem;border-radius:16px;border-left:4px solid #84cc16;">
+                    <h3 style="font-size:1.3rem;font-weight:700;color:#14532d;margin-bottom:1rem;"><i class="fas fa-dumbbell" style="color:#84cc16;margin-right:0.5rem;"></i>Strength Training</h3>
+                    <ul style="color:#374151;line-height:1.8;padding-left:1rem;">
+                        <li>Body Pump</li>
+                        <li>Functional Training</li>
+                        <li>Core Focus</li>
+                        <li>Bootcamp</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <!-- <section class="pricing" style="max-width:1200px;margin:0 auto 4rem auto;padding:0 24px;">
+            <h2 style="font-size:2.5rem;font-weight:800;color:#14532d;text-align:center;margin-bottom:3rem;">Class Packages</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;">
+                <div style="background:#fff;padding:2.5rem;border-radius:20px;box-shadow:0 8px 30px rgba(0,0,0,0.1);text-align:center;border:2px solid #e5e7eb;display:flex;flex-direction:column;height:100%;">
+                    <h3 style="font-size:1.5rem;font-weight:700;color:#14532d;margin-bottom:1rem;">Drop-In</h3>
+                    <div style="font-size:2.5rem;font-weight:800;color:#84cc16;margin-bottom:1rem;">AED 99</div>
+                    <div style="color:#6b7280;margin-bottom:2rem;">per class</div>
+                    <ul style="text-align:left;color:#374151;line-height:1.8;margin-bottom:2rem;">
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>Single Class Access</li>
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>All Class Types</li>
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>Equipment Provided</li>
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>Locker Room Access</li>
+                    </ul>
+                    <a href="contact.html" style="display:inline-block;background:#84cc16;color:#fff;font-weight:600;padding:1rem 2rem;border-radius:8px;text-decoration:none;transition:all 0.3s ease;margin-top:auto;">Choose Plan</a>
+                </div>
+                <div style="background:#fff;padding:2.5rem;border-radius:20px;box-shadow:0 8px 30px rgba(0,0,0,0.1);text-align:center;border:2px solid #84cc16;position:relative;display:flex;flex-direction:column;height:100%;">
+                    <div style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#84cc16;color:#fff;padding:0.5rem 1.5rem;border-radius:20px;font-size:0.9rem;font-weight:600;">Most Popular</div>
+                    <h3 style="font-size:1.5rem;font-weight:700;color:#14532d;margin-bottom:1rem;">Monthly Pass</h3>
+                    <div style="font-size:2.5rem;font-weight:800;color:#84cc16;margin-bottom:1rem;">AED 599</div>
+                    <div style="color:#6b7280;margin-bottom:2rem;">per month</div>
+                    <ul style="text-align:left;color:#374151;line-height:1.8;margin-bottom:2rem;">
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>Unlimited Classes</li>
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>All Class Types</li>
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>Equipment Provided</li>
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>Locker Room Access</li>
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>Class Booking Priority</li>
+                    </ul>
+                    <a href="contact.html" style="display:inline-block;background:linear-gradient(135deg,#84cc16,#65a30d);color:#fff;font-weight:600;padding:1rem 2rem;border-radius:8px;text-decoration:none;transition:all 0.3s ease;margin-top:auto;">Choose Plan</a>
+                </div>
+                <div style="background:#fff;padding:2.5rem;border-radius:20px;box-shadow:0 8px 30px rgba(0,0,0,0.1);text-align:center;border:2px solid #e5e7eb;display:flex;flex-direction:column;height:100%;">
+                    <h3 style="font-size:1.5rem;font-weight:700;color:#14532d;margin-bottom:1rem;">Annual Pass</h3>
+                    <div style="font-size:2.5rem;font-weight:800;color:#84cc16;margin-bottom:1rem;">AED 5,999</div>
+                    <div style="color:#6b7280;margin-bottom:2rem;">per year</div>
+                    <ul style="text-align:left;color:#374151;line-height:1.8;margin-bottom:2rem;">
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>Unlimited Classes</li>
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>All Class Types</li>
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>Equipment Provided</li>
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>Locker Room Access</li>
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>Priority Booking</li>
+                        <li><i class="fas fa-check" style="color:#84cc16;margin-right:0.5rem;"></i>2 Free Guest Passes</li>
+                    </ul>
+                    <a href="contact.html" style="display:inline-block;background:#84cc16;color:#fff;font-weight:600;padding:1rem 2rem;border-radius:8px;text-decoration:none;transition:all 0.3s ease;margin-top:auto;">Choose Plan</a>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- CTA Section -->
+        <section class="cta-section" style="background:linear-gradient(135deg,#14532d,#1f2937);padding:4rem 2rem;text-align:center;margin:0 24px 4rem 24px;border-radius:24px;color:#fff;">
+            <h2 style="font-size:2.5rem;font-weight:800;margin-bottom:1.5rem;">Join Our Fitness Community</h2>
+            <p style="font-size:1.2rem;margin-bottom:2rem;opacity:0.9;">Experience the energy and motivation of group fitness with our diverse range of classes and supportive community.</p>
+            <a href="contact.html" style="display:inline-block;background:#84cc16;color:#fff;font-weight:700;padding:1.2rem 3rem;border-radius:12px;text-decoration:none;font-size:1.1rem;transition:all 0.3s ease;" onmouseover="this.style.background='#65a30d';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#84cc16';this.style.transform='translateY(0)'">Start Your Group Fitness Journey</a>
+        </section>
+
+        <!-- Contact Form Section Start -->
+        <section class="blog-contact-section" style="background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);padding:80px 24px;">
+            <div class="blog-contact-form-wrapper" style="max-width:950px;margin:0 auto;background:#fff;border-radius:36px;box-shadow:0 10px 40px rgba(0,0,0,0.18);display:flex;align-items:stretch;overflow:hidden;">
+                <div class="blog-contact-form-side" style="flex:1 1 50%;padding:3rem 2.5rem;display:flex;flex-direction:column;justify-content:center;min-width:320px;">
+                    <div class="blog-contact-header" style="text-align:center;margin-bottom:2rem;">
+                        <h2 style="font-size:2.3rem;color:#1f2937;font-weight:700;margin-bottom:0.5rem;">Ready to Transform Your Life?</h2>
+                        <p style="color:#4b5563;font-size:1.1rem;">Book a free consultation with our expert trainers to find the perfect program for you.</p>
+                    </div>
+                    <form class="blog-contact-form" id="blogContactForm" autocomplete="off">
+                        <div class="form-group" style="margin-bottom:1.5rem;">
+                            <label for="blog-name" style="display:block;margin-bottom:0.5rem;color:#374151;font-weight:500;">Full name *</label>
+                            <input type="text" id="blog-name" name="name" required placeholder="Enter your full name" />
+                        </div>
+                        <div class="form-group" style="margin-bottom:1.5rem;">
+                            <label for="blog-email" style="display:block;margin-bottom:0.5rem;color:#374151;font-weight:500;">Email *</label>
+                            <input type="email" id="blog-email" name="email" required placeholder="Enter your email address" />
+                        </div>
+                        <div class="form-group">
+                            <label for="blog-phone">Phone number *</label>
+                            <div class="phone-input-wrapper" style="display: flex; align-items: center; width: 100%;">
+                                <select id="blog-country-code" name="country-code" class="country-code-select" style="width: 30%; min-width: 90px; max-width: 140px; border: 1px solid #d1d5db; border-right: none; border-radius: 8px 0 0 8px; height: 48px; font-size: 1rem; font-family: inherit;">
+                                    <option value="+971" selected>🇦🇪 +971</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+91">🇮🇳 +91</option>
+                                    <option value="+61">🇦🇺 +61</option>
+                                    <option value="+81">🇯🇵 +81</option>
+                                    <option value="+49">🇩🇪 +49</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+39">🇮🇹 +39</option>
+                                </select>
+                                <input type="tel" id="blog-phone" name="phone" required placeholder="Enter phone number" pattern="[0-9]+" inputmode="numeric" style="width: 70%; border: 1px solid #d1d5db; border-left: none; border-radius: 0 8px 8px 0; height: 48px; font-size: 1rem; padding-left: 1em;" />
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom:1.5rem;">
+                            <label for="blog-service" style="display:block;margin-bottom:0.5rem;color:#374151;font-weight:500;">Service Interested In *</label>
+                            <select id="blog-service" name="service" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="personal-training">Personal Training</option>
+                                <option value="online-training">Online Training</option>
+                                <option value="nutrition">Nutrition Plans</option>
+                                <option value="group-classes">Group Classes</option>
+                                <option value="crossfit">CrossFit Training</option>
+                                <option value="weightlifting">Olympic Weightlifting</option>
+                                <option value="weight-loss">Weight Loss / Fat Loss</option>
+                                <option value="rehabilitation">Rehabilitation & Recovery</option>
+                                <option value="muscle-gain">Muscle Gain</option>
+                                <option value="muscle-hypertrophy">Muscle Hypertrophy / Bodybuilding</option>
+                                <option value="group-functional">Group Functional Training</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-bottom:1.5rem;">
+                            <label for="blog-message" style="display:block;margin-bottom:0.5rem;color:#374151;font-weight:500;">Your Message</label>
+                            <textarea id="blog-message" name="message" rows="4" placeholder="Type your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" style="width:100%;margin-top:1.2rem;">Book Your Consultation</button>
+                    </form>
+                    <div class="success-message" id="blogSuccessMessage" style="display:none;text-align:center;color:#10b981;font-weight:600;margin-top:1rem;animation:successCheck 0.5s ease-out;">
+                        <i class="fas fa-check-circle"></i> Thank you! We'll get back to you soon.
+                    </div>
+                </div>
+                <div class="blog-contact-img-side" style="flex:1 1 50%;position:relative;min-width:320px;background:#f0fdf4;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+                    <img src="images/contact.jpg" alt="Fitness consultation" style="width:100%;height:100%;object-fit:cover;display:block;">
+                </div>
+            </div>
+        </section>
+        <!-- Contact Form Section End -->
+        <script>
+        // Blog contact form logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('blogContactForm');
+            const submitBtn = form ? form.querySelector('.submit-btn') : null;
+            const successMessage = document.getElementById('blogSuccessMessage');
+            if (form && submitBtn && successMessage) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    submitBtn.classList.add('loading');
+                    submitBtn.textContent = 'Sending...';
+                    setTimeout(() => {
+                        submitBtn.classList.remove('loading');
+                        submitBtn.textContent = 'Book Your Consultation';
+                        successMessage.style.display = 'block';
+                        form.reset();
+                        setTimeout(() => {
+                            successMessage.style.display = 'none';
+                        }, 5000);
+                    }, 2000);
+                });
+                submitBtn.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    ripple.classList.add('ripple');
+                    this.appendChild(ripple);
+                    setTimeout(() => { ripple.remove(); }, 600);
+                });
+                const formFields = form.querySelectorAll('input, select, textarea');
+                formFields.forEach(field => {
+                    field.addEventListener('focus', function() {
+                        this.parentElement.style.transform = 'scale(1.02)';
+                    });
+                    field.addEventListener('blur', function() {
+                        this.parentElement.style.transform = 'scale(1)';
+                    });
+                });
+            }
+        });
+        </script>
+    </main>
+
+    <!-- Footer Section Start -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Footer Top Section -->
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="images/logow.png" alt="Fitness Architects Logo" class="footer-logo">
+                <p class="footer-description">Building stronger bodies and stronger communities through personalized fitness solutions.</p>
+                
+                <div class="footer-social">
+                    <h3 class="social-title">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-nav">
+                    <li><a href="trainers.html" class="footer-link">Our Trainers</a></li>
+                    <li><a href="services.html" class="footer-link">Services</a></li>
+                    <li><a href="personal-training.html" class="footer-link">Personal Training</a></li>
+                    <li><a href="blog.html" class="footer-link">Blog</a></li>
+                    <li><a href="bmi-calculator.html" class="footer-link">BMI Calculator</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-services">
+                <h3 class="footer-heading">Our Services</h3>
+                <ul class="footer-nav">
+                    <li><a href="personal-training.html" class="footer-link">Personal Training</a></li>
+                    <li><a href="online-training.html" class="footer-link">Online Training</a></li>
+                    <li><a href="nutrition-plans.html" class="footer-link">Nutrition Plans</a></li>
+                    <li><a href="group-classes.html" class="footer-link">Group Classes</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">CrossFit Training</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">Olympics weightlifting</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">fat loss</a></li>
+                    <li><a href="crossfit-training.html" class="footer-link">Rehabilitation</a></li>                                     
+                    <li><a href="rehabilitation.html" class="footer-link">Muscle gain</a></li>
+                    <li><a href="rehabilitation.html" class="footer-link">Bodybuilding</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3 class="footer-heading">Contact Info</h3>
+                <ul class="contact-info">
+                    <li class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <span>Dubai, United Arab Emirates</span>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-phone-alt contact-icon"></i>
+                        <a href="tel:+971505789033">+971 509859515 </a>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <a href="mailto:info@fitnessarchitects.ae">fitnessarchitects29@gmail.com </a>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fas fa-clock contact-icon"></i>
+                        <div>
+                            <span>Mon - Sat: 6:00 AM - 10:00 PM</span>
+                            <span>Sunday: 8:00 AM - 8:00 PM</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p class="copyright">&copy; <span id="current-year"></span> Fitness Architects. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy.html" class="legal-link">Privacy Policy</a>
+                    <a href="terms.html" class="legal-link">Terms of Service</a>
+                    <a href="sitemap.html" class="legal-link">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</footer>
+<!-- Footer Section End -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <style>
+    .training-type-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+        max-width: 1000px;
+        margin: 0 auto 2rem auto;
+    }
+    .training-type-card {
+        background: #f0fdf4;
+        border-left: 4px solid #84cc16;
+        border-radius: 14px;
+        box-shadow: 0 4px 16px rgba(132,204,22,0.08);
+        padding: 2rem 1.2rem 1.5rem 1.2rem;
+        color: #14532d;
+        font-size: 1.13rem;
+        font-weight: 500;
+        text-align: center;
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 260px;
+    }
+    .training-type-icon {
+        font-size: 2.3rem;
+        color: #84cc16;
+        margin-bottom: 1rem;
+    }
+    .training-type-card h3 {
+        font-size: 1.18rem;
+        font-weight: 700;
+        margin-bottom: 0.7rem;
+        color: #14532d;
+    }
+    .training-type-card p {
+        color: #374151;
+        font-size: 1rem;
+        margin: 0;
+    }
+    .training-type-card:hover {
+        transform: translateY(-6px) scale(1.04);
+        box-shadow: 0 8px 32px rgba(132,204,22,0.18);
+        background: #e6f9d5;
+    }
+    @media (max-width: 600px) {
+        .training-type-cards {
+            grid-template-columns: 1fr;
+        }
+        .training-type-card {
+            padding: 1.2rem 0.7rem 1rem 0.7rem;
+        }
+    }
+    .enhanced-card {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 6px 32px rgba(132,204,22,0.13);
+        padding: 2.2rem 1.3rem 1.7rem 1.3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 320px;
+        position: relative;
+        transition: box-shadow 0.25s, transform 0.2s;
+    }
+    .enhanced-card:hover {
+        box-shadow: 0 12px 40px rgba(132,204,22,0.22);
+        transform: translateY(-6px) scale(1.04);
+    }
+    .view-more-btn {
+        margin-top: auto;
+        background: linear-gradient(135deg,#84cc16,#65a30d);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 0.7rem 1.7rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(132,204,22,0.13);
+        transition: background 0.2s, transform 0.2s;
+    }
+    .view-more-btn:hover {
+        background: #65a30d;
+        transform: translateY(-2px);
+    }
+    .more-text {
+        color: #374151;
+        font-size: 0.98rem;
+        margin-top: 0.7rem;
+        margin-bottom: 0.5rem;
+        display: none;
+    }
+    </style>
+    <script>
+    document.querySelectorAll('.view-more-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var more = this.previousElementSibling;
+            if (more.style.display === 'none' || !more.style.display) {
+                more.style.display = 'block';
+                this.textContent = 'View Less';
+            } else {
+                more.style.display = 'none';
+                this.textContent = 'View More';
+            }
+        });
+    });
+    </script>
+</body>
+</html> 
