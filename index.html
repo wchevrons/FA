@@ -1338,46 +1338,61 @@ document.addEventListener('DOMContentLoaded', function() {
                 }   
             </style>
 
-            <form id="consultationForm" class="consultation-form">
-                <div class="form-group">
-                    <input type="text" id="popup-name" name="name" required placeholder=" " />
-                    <label for="popup-name">Full name *</label>
-                </div>
+           <form id="consultationForm" class="consultation-form" action="https://api.web3forms.com/submit" method="POST">
+    
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="971e53dd-6e01-47d5-b835-4d2fa07936cd">
 
-                <div class="form-group">
-                    <input type="email" id="popup-email" name="email" required placeholder=" " />
-                    <label for="popup-email">Email *</label>
-                </div>
+    <!-- Full Name -->
+    <div class="form-group">
+        <input type="text" id="popup-name" name="name" required placeholder=" " />
+        <label for="popup-name">Full name *</label>
+    </div>
 
-                <div class="form-group">
-                    <input type="tel" id="popup-phone" name="phone" required placeholder=" " pattern="[0-9]+" inputmode="numeric" />
-                    <label for="popup-phone">Phone Number *</label>
-                </div>
+    <!-- Email -->
+    <div class="form-group">
+        <input type="email" id="popup-email" name="email" required placeholder=" " />
+        <label for="popup-email">Email *</label>
+    </div>
 
-                <div class="form-group">
-                    <select id="popup-service" name="service" required>
-                        <option value="" disabled selected>Select a service</option>
-                        <option value="personal-training">Personal Training</option>
-                        <option value="online-training">Online Training</option>
-                        <option value="nutrition">Nutrition Plans</option>
-                        <option value="group-classes">Group Classes</option>
-                        <option value="crossfit">CrossFit Training</option>
-                        <option value="weightlifting">Olympic Weightlifting</option>
-                        <option value="weight-loss">Weight Loss / Fat Loss</option>
-                        <option value="rehabilitation">Rehabilitation & Recovery</option>
-                        <option value="muscle-gain">Muscle Gain</option>
-                        <option value="muscle-hypertrophy">Muscle Hypertrophy / Bodybuilding</option>
-                        <option value="group-functional">Group Functional Training</option>
-                    </select>
-                </div>
+    <!-- Phone -->
+    <div class="form-group">
+        <input type="tel" id="popup-phone" name="phone" required placeholder=" " pattern="[0-9]+" inputmode="numeric" />
+        <label for="popup-phone">Phone Number *</label>
+    </div>
 
-                <div class="form-group">
-                    <textarea id="popup-message" name="message" rows="3" placeholder="Tell us about your fitness goals..." required></textarea>
-                </div>
+    <!-- Service Dropdown -->
+    <div class="form-group">
+        <select id="popup-service" name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="personal-training">Personal Training</option>
+            <option value="online-training">Online Training</option>
+            <option value="nutrition">Nutrition Plans</option>
+            <option value="group-classes">Group Classes</option>
+            <option value="crossfit">CrossFit Training</option>
+            <option value="weightlifting">Olympic Weightlifting</option>
+            <option value="weight-loss">Weight Loss / Fat Loss</option>
+            <option value="rehabilitation">Rehabilitation & Recovery</option>
+            <option value="muscle-gain">Muscle Gain</option>
+            <option value="muscle-hypertrophy">Muscle Hypertrophy / Bodybuilding</option>
+            <option value="group-functional">Group Functional Training</option>
+        </select>
+    </div>
 
-                <button type="submit" class="submit-btn">Book Free Consultation</button>
-            </form>
+    <!-- Message -->
+    <div class="form-group">
+        <textarea id="popup-message" name="message" rows="3" placeholder="Tell us about your fitness goals..." required></textarea>
+    </div>
 
+    <!-- Honeypot Anti-Spam -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <!-- Optional: Redirect on Success -->
+    <!-- <input type="hidden" name="redirect" value="https://yourdomain.com/thank-you.html"> -->
+
+    <!-- Submit Button -->
+    <button type="submit" class="submit-btn">Book Free Consultation</button>
+</form>
             
             <div id="popupSuccessMessage" class="success-message" style="display: none; text-align: center; color: #10b981; font-weight: 600; margin-top: 1rem;">
                 <i class="fas fa-check-circle"></i> Thank you! We'll contact you soon.
