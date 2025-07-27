@@ -484,7 +484,8 @@
 
             <div class="contact-form-section">
                 <div class="contact-form-wrapper">
-                    <form class="contact-form" id="homeContactForm" autocomplete="off">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="homeContactForm" autocomplete="off">
+                       <input type="hidden" name="access_key" value="971e53dd-6e01-47d5-b835-4d2fa07936cd">
                         <div class="form-group">
                             <input type="text" id="home-name" name="name" required placeholder=" " />
                             <label for="home-name">Full name *</label>
@@ -533,6 +534,9 @@
                             <textarea id="home-message" name="message" rows="4" placeholder=" "></textarea>
                             <label for="home-message">Your Message</label>
                         </div>
+
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
                         <button type="submit" class="submit-btn">Get a Free Quote</button>
                     </form>
                 </div>
@@ -909,7 +913,8 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contactFormIndex" autocomplete="off">
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contactFormIndex" autocomplete="off">
+                  <input type="hidden" name="access_key" value="971e53dd-6e01-47d5-b835-4d2fa07936cd">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" required>
@@ -957,6 +962,7 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" required></textarea>
                     </div>
+                     <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
             </div>
@@ -1338,11 +1344,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }   
             </style>
 
-           <form id="consultationForm" class="consultation-form" action="https://api.web3forms.com/submit" method="POST">
+           <form action="https://api.web3forms.com/submit" method="POST" class="consultation-form" >
     
     <!-- Web3Forms Access Key -->
-    <input type="hidden" name="access_key" value="971e53dd-6e01-47d5-b835-4d2fa07936cd">
-
+   <input type="hidden" name="access_key" value="971e53dd-6e01-47d5-b835-4d2fa07936cd">
     <!-- Full Name -->
     <div class="form-group">
         <input type="text" id="popup-name" name="name" required placeholder=" " />
@@ -1385,8 +1390,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
     <!-- Honeypot Anti-Spam -->
-    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
+     <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
     <!-- Optional: Redirect on Success -->
     <!-- <input type="hidden" name="redirect" value="https://yourdomain.com/thank-you.html"> -->
 
