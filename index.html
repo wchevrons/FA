@@ -802,29 +802,33 @@
 
             <div class="contact-form-section">
                 <div class="contact-form-wrapper">
-                    <form action="https://api.web3forms.com/submit" method="POST" class="consultation-form">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" autocomplete="off">
 
-  <!-- ✅ Your Access Key -->
+  <!-- ✅ Web3Forms Access Key -->
   <input type="hidden" name="access_key" value="971e53dd-6e01-47d5-b835-4d2fa07936cd">
 
-  <!-- ✅ Form Fields -->
+  <!-- ✅ Full Name -->
   <div class="form-group">
-    <input type="text" name="name" required placeholder=" " />
-    <label>Full name *</label>
+    <label for="name">Full Name *</label>
+    <input type="text" id="name" name="name" required>
   </div>
 
+  <!-- ✅ Email -->
   <div class="form-group">
-    <input type="email" name="email" required placeholder=" " />
-    <label>Email *</label>
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required>
   </div>
 
+  <!-- ✅ Phone -->
   <div class="form-group">
-    <input type="tel" name="phone" required placeholder=" " pattern="[0-9]+" inputmode="numeric" />
-    <label>Phone Number *</label>
+    <label for="phone">Phone Number *</label>
+    <input type="tel" id="phone" name="phone" required pattern="[0-9]+" inputmode="numeric">
   </div>
 
+  <!-- ✅ Service Dropdown -->
   <div class="form-group">
-    <select name="service" required>
+    <label for="service">Select a Service *</label>
+    <select id="service" name="service" required>
       <option value="" disabled selected>Select a service</option>
       <option value="personal-training">Personal Training</option>
       <option value="online-training">Online Training</option>
@@ -840,18 +844,21 @@
     </select>
   </div>
 
+  <!-- ✅ Message -->
   <div class="form-group">
-    <textarea name="message" rows="3" placeholder="Tell us about your fitness goals..." required></textarea>
+    <label for="message">Your Message *</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
   </div>
 
-  <!-- ✅ Anti-bot field (Leave it empty) -->
-  <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+  <!-- ✅ Anti-bot field (Leave empty) -->
+  <input type="text" name="botcheck" style="display: none;">
 
-  
 
   <!-- ✅ Submit Button -->
-  <button type="submit" class="submit-btn">Book Free Consultation</button>
-</form>              </div>
+  <button type="submit" class="submit-btn">Submit</button>
+
+</form>
+                </div>
                 <div class="contact-image-wrapper">
                     <img src="images/contact.jpg" alt="Fitness model">
                 </div>
@@ -1035,8 +1042,8 @@
                         </div>
                     </div>
                     <div class="client-info reel-client-info">
-                        <h3>Sarah K.</h3>
-                        <p>Lost 18kg in 4 months</p>
+                        <h3>John</h3>
+                        
                     </div>
                 </div>
                 
@@ -1051,8 +1058,8 @@
                         </div>
                     </div>
                     <div class="client-info reel-client-info">
-                        <h3>Ahmed R.</h3>
-                        <p>Gained 8kg muscle in 3 months</p>
+                        <h3>Angelos</h3>
+                        
                     </div>
                 </div>
                 
@@ -1067,8 +1074,8 @@
                         </div>
                     </div>
                     <div class="client-info reel-client-info">
-                        <h3>Priya M.</h3>
-                        <p>Improved endurance by 40%</p>
+                        <h3>Sumit Bhatia</h3>
+                       
                     </div>
                 </div>
                 
@@ -1690,7 +1697,7 @@
                 }   
             </style>
 
-          <form action="https://api.web3forms.com/submit" method="POST" class="consultation-form">
+         <form action="https://api.web3forms.com/submit" method="POST" class="consultation-form">
 
   <!-- ✅ Your Access Key -->
   <input type="hidden" name="access_key" value="971e53dd-6e01-47d5-b835-4d2fa07936cd">
@@ -1740,7 +1747,6 @@
   <!-- ✅ Submit Button -->
   <button type="submit" class="submit-btn">Book Free Consultation</button>
 </form>
-
             
             <div id="popupSuccessMessage" class="success-message" style="display: none; text-align: center; color: #10b981; font-weight: 600; margin-top: 1rem;">
                 <i class="fas fa-check-circle"></i> Thank you! We'll contact you soon.
