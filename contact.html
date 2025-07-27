@@ -308,6 +308,8 @@
 
         
     </style>
+
+    
 </head>
 <body>
 <header class="site-header">
@@ -621,7 +623,9 @@
     }
 </style>
 
-<form id="consultationForm" class="consultation-form">
+<form "https://api.web3forms.com/submit" method="POST" id="consultationForm" class="consultation-form">
+    
+    <input type="hidden" name="access_key" value="971e53dd-6e01-47d5-b835-4d2fa07936cd">
     <div class="form-group">
         <input type="text" id="popup-name" name="name" required placeholder=" " />
         <label for="popup-name">Full name *</label>
@@ -657,7 +661,7 @@
     <div class="form-group">
         <textarea id="popup-message" name="message" rows="3" placeholder="Tell us about your fitness goals..." required></textarea>
     </div>
-
+ <input type="text" name="botcheck" style="display: none;">
     <button type="submit" class="submit-btn">Book Free Consultation</button>
 </form>
 
