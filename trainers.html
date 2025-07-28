@@ -28,6 +28,34 @@
             color: white;
         }
 
+        .contact-page-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 24px;
+        }
+        .contact-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .contact-header .subtitle {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .contact-header h1 {
+            font-size: 3.5rem;
+            color: #1f2937;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .contact-header p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #4b5563;
+            line-height: 1.7;
+        }
 
 /* Contact Form Section */
         .home-contact-section {
@@ -175,6 +203,68 @@
 
 
 </style>
+
+<style>
+    /* Update this section in your trainers page */
+    .home-contact-section {
+        padding: 30px 24px;
+        background-color: #f8fafc;
+    }
+    .home-contact-container {
+        max-width: 1100px; /* Changed from 700px */
+        margin: 0 auto;
+    }
+    
+    /* Make the form section match the first page */
+    .contact-form-section {
+        display: flex;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        overflow: hidden;
+        flex-wrap: wrap;
+    }
+    .contact-form-wrapper {
+        flex: 1 1 50%;
+        padding: 3rem;
+        min-width: 320px;
+    }
+    .contact-image-wrapper {
+        flex: 1 1 50%;
+        min-width: 320px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Added to match first page */
+        z-index: 1;
+        transition: all 0.2s;
+    }
+    
+    /* Add the phone input styles from first page */
+    .phone-input-wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .country-code-select {
+        width: 30%;
+        min-width: 90px;
+        max-width: 140px;
+        border: 1px solid #d1d5db;
+        border-right: none;
+        border-radius: 8px 0 0 8px;
+        height: 48px;
+        font-size: 1rem;
+        font-family: inherit;
+    }
+    .phone-input {
+        width: 70%;
+        border: 1px solid #d1d5db;
+        border-left: none;
+        border-radius: 0 8px 8px 0;
+        height: 48px;
+        font-size: 1rem;
+        padding-left: 1em;
+    }
+</style>
+
 </head>
 <body>
     <header class="site-header">
@@ -666,6 +756,7 @@
             </div>
         </div>
     </section>
+    
     <!-- Home Contact Form Section End -->
         <script>
         // Blog contact form logic
