@@ -621,6 +621,12 @@ function debounce(func, wait) {
     };
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const addressElement = document.querySelector('.footer-contact .contact-item span');
+    if (addressElement && addressElement.textContent.includes("Dubai")) {
+        addressElement.textContent = addressElement.textContent.replace("Dubai", "Abu Dhabi");
+    }
+});
 // Optimized scroll handler
 const optimizedScrollHandler = debounce(function() {
     // Add any scroll-based functionality here
