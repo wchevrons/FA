@@ -802,56 +802,58 @@
 
             <div class="contact-form-section">
                 <div class="contact-form-wrapper">
-                   <form action="https://api.web3forms.com/submit" method="POST" class="consultation-form">
+  <form class="contact-form" id="homeContactForm" autocomplete="off" action="https://api.web3forms.com/submit" method="POST">
 
-  <!-- ✅ Your Access Key -->
-  <input type="hidden" name="access_key" value="971e53dd-6e01-47d5-b835-4d2fa07936cd">
+    <!-- ✅ Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="971e53dd-6e01-47d5-b835-4d2fa07936cd">
 
-  <!-- ✅ Form Fields -->
-  <div class="form-group">
-    <input type="text" name="name" required placeholder=" " />
-    <label>Full name *</label>
-  </div>
+    <!-- ✅ Anti-bot field -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
-  <div class="form-group">
-    <input type="email" name="email" required placeholder=" " />
-    <label>Email *</label>
-  </div>
+    <div class="form-group">
+        <input type="text" id="home-name" name="name" required placeholder=" " />
+        <label for="home-name">Full name *</label>
+    </div>
 
-  <div class="form-group">
-    <input type="tel" name="phone" required placeholder=" " pattern="[0-9]+" inputmode="numeric" />
-    <label>Phone Number *</label>
-  </div>
+    <div class="form-group">
+        <input type="email" id="home-email" name="email" required placeholder=" " />
+        <label for="home-email">Email *</label>
+    </div>
 
-  <div class="form-group">
-    <select name="service" required>
-      <option value="" disabled selected>Select a service</option>
-      <option value="personal-training">Personal Training</option>
-      <option value="online-training">Online Training</option>
-      <option value="nutrition">Nutrition Plans</option>
-      <option value="group-classes">Group Classes</option>
-      <option value="crossfit">CrossFit Training</option>
-      <option value="weightlifting">Olympic Weightlifting</option>
-      <option value="weight-loss">Weight Loss / Fat Loss</option>
-      <option value="rehabilitation">Rehabilitation & Recovery</option>
-      <option value="muscle-gain">Muscle Gain</option>
-      <option value="muscle-hypertrophy">Muscle Hypertrophy / Bodybuilding</option>
-      <option value="group-functional">Group Functional Training</option>
-    </select>
-  </div>
+    <div class="form-group">
+        <div class="phone-input-wrapper" style="display: flex; align-items: center; width: 100%;">
+            <input type="tel" id="home-phone" name="phone" required placeholder=" " pattern="[0-9]+" inputmode="numeric" style="width: 100%; border: 1px solid #d1d5db; border-radius: 8px; height: 48px; font-size: 1rem; padding-left: 1em;" />
+            <label for="home-phone">Phone number *</label>
+        </div>
+    </div>
 
-  <div class="form-group">
-    <textarea name="message" rows="3" placeholder="Tell us about your fitness goals..." required></textarea>
-  </div>
+    <div class="form-group">
+        <select id="home-service" name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="personal-training">Personal Training</option>
+            <option value="online-training">Online Training</option>
+            <option value="nutrition">Nutrition Plans</option>
+            <option value="group-classes">Group Classes</option>
+            <option value="crossfit">CrossFit Training</option>
+            <option value="weightlifting">Olympic Weightlifting</option>
+            <option value="weight-loss">Weight Loss / Fat Loss</option>
+            <option value="rehabilitation">Rehabilitation & Recovery</option>
+            <option value="muscle-gain">Muscle Gain</option>
+            <option value="muscle-hypertrophy">Muscle Hypertrophy / Bodybuilding</option>
+            <option value="group-functional">Group Functional Training</option>
+        </select>
+        <!-- <label for="home-service">Service Interested In *</label> -->
+    </div>
 
-  <!-- ✅ Anti-bot field (Leave it empty) -->
-  <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+    <div class="form-group">
+        <textarea id="home-message" name="message" rows="4" placeholder=" "></textarea>
+        <label for="home-message">Your Message</label>
+    </div>
 
-  
+    <button type="submit" class="submit-btn">Get a Free Quote</button>
+</form>
 
-  <!-- ✅ Submit Button -->
-  <button type="submit" class="submit-btn">Book Free Consultation</button>
-</form>                </div>
+                </div>
                 <div class="contact-image-wrapper">
                     <img src="images/contact.jpg" alt="Fitness model">
                 </div>
@@ -866,11 +868,9 @@
             <div class="about-text">
                 <h2>About Fitness Architects</h2>
                 <p>
-At Fitness Architects, we don’t just build bodies, we build confidence, discipline, and community. Founded by <b> Coach Nishant </b>, our visionary Head Coach, Fitness Architects was created with one mission in mind: to transform lives through smart and sustainable fitness.
-
-With a team of certified trainers and wellness professionals, we offer a personalized and holistic approach tailored to every fitness level, from first timers to elite athletes. Through innovative training programs, expert guidance, and a supportive environment, we empower you to unlock your full potential.
-
-Our state of the art facility is more than just a gym. It is a space where dedication meets results and every member becomes part of a movement toward strength, health, and long term well being.                </p>                <div class="about-mission">
+                    At Fitness Architects, we believe in building strong bodies and strong communities. Our team of certified trainers and wellness experts are dedicated to helping you achieve your fitness goals through personalized programs, innovative classes, and ongoing support. Whether you're a beginner or a seasoned athlete, our holistic approach ensures you get the results you want in a motivating and inclusive environment. With state-of-the-art facilities and expert guidance, we create customized fitness solutions that help you reach your full potential.
+                </p>
+                <div class="about-mission">
                     <a href="contact.html" class="cta-btn about-cta">Join Us Now</a>
                 </div>
             </div>
@@ -1037,8 +1037,8 @@ Our state of the art facility is more than just a gym. It is a space where dedic
                         </div>
                     </div>
                     <div class="client-info reel-client-info">
-                        <h3>John</h3>
-                        
+                        <h3>Sarah K.</h3>
+                        <p>Lost 18kg in 4 months</p>
                     </div>
                 </div>
                 
@@ -1053,8 +1053,8 @@ Our state of the art facility is more than just a gym. It is a space where dedic
                         </div>
                     </div>
                     <div class="client-info reel-client-info">
-                        <h3>Angelos</h3>
-                         <!-- <p>Gained 8kg muscle in 3 months</p> -->
+                        <h3>Ahmed R.</h3>
+                        <p>Gained 8kg muscle in 3 months</p>
                     </div>
                 </div>
                 
@@ -1069,8 +1069,8 @@ Our state of the art facility is more than just a gym. It is a space where dedic
                         </div>
                     </div>
                     <div class="client-info reel-client-info">
-                        <h3>Sumit Bhatia</h3>
-                        <!-- <p>Improved endurance by 40%</p> -->
+                        <h3>Priya M.</h3>
+                        <p>Improved endurance by 40%</p>
                     </div>
                 </div>
                 
@@ -1227,59 +1227,84 @@ Our state of the art facility is more than just a gym. It is a space where dedic
                         </div>
                     </div>
                 </div>
-              <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" autocomplete="off">
+ <form class="contact-form" id="homeContactForm" autocomplete="off" method="POST" action="https://api.web3forms.com/submit" style="position: relative;">
 
-  <!-- ✅ Your Web3Forms Access Key -->
-  <input type="hidden" name="access_key" value="971e53dd-6e01-47d5-b835-4d2fa07936cd">
+    <!-- ✅ Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="971e53dd-6e01-47d5-b835-4d2fa07936cd">
 
-  <!-- ✅ Form Fields -->
-  <div class="form-group">
-    <label for="name">Full Name *</label>
-    <input type="text" id="name" name="name" required>
-  </div>
+    <!-- ✅ Anti-bot field -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
-  <div class="form-group">
-    <label for="email">Email Address *</label>
-    <input type="email" id="email" name="email" required>
-  </div>
+    <div class="form-group" style="position: relative; margin-bottom: 1.5rem;">
+        <input type="text" id="home-name" name="name" required placeholder=" " 
+               style="width: 100%; padding: 0.9rem 1rem; border: 1px solid #d1d5db; border-radius: 8px; 
+                      font-size: 1rem; font-family: inherit; background-color: #fff; z-index: 1;" />
+        <label for="home-name" 
+               style="position: absolute; left: 1rem; top: 0.9rem; color: #9ca3af; background-color: #fff; 
+                      padding: 0 0.25rem; margin: 0; transition: all 0.2s; pointer-events: none; z-index: 2;">
+            Full name *
+        </label>
+    </div>
 
-  <div class="form-group">
-    <label for="phone">Phone Number *</label>
-    <input type="tel" id="phone" name="phone" required pattern="[0-9]+" inputmode="numeric">
-  </div>
+    <div class="form-group" style="position: relative; margin-bottom: 1.5rem;">
+        <input type="email" id="home-email" name="email" required placeholder=" " 
+               style="width: 100%; padding: 0.9rem 1rem; border: 1px solid #d1d5db; border-radius: 8px; 
+                      font-size: 1rem; font-family: inherit; background-color: #fff; z-index: 1;" />
+        <label for="home-email" 
+               style="position: absolute; left: 1rem; top: 0.9rem; color: #9ca3af; background-color: #fff; 
+                      padding: 0 0.25rem; margin: 0; transition: all 0.2s; pointer-events: none; z-index: 2;">
+            Email *
+        </label>
+    </div>
 
-  <div class="form-group">
-    <label for="service">Select a Service *</label>
-    <select id="service" name="service" required>
-      <option value="" disabled selected>Select a service</option>
-      <option value="personal-training">Personal Training</option>
-      <option value="online-training">Online Training</option>
-      <option value="nutrition">Nutrition Plans</option>
-      <option value="group-classes">Group Classes</option>
-      <option value="crossfit">CrossFit Training</option>
-      <option value="weightlifting">Olympic Weightlifting</option>
-      <option value="weight-loss">Weight Loss / Fat Loss</option>
-      <option value="rehabilitation">Rehabilitation & Recovery</option>
-      <option value="muscle-gain">Muscle Gain</option>
-      <option value="muscle-hypertrophy">Muscle Hypertrophy / Bodybuilding</option>
-      <option value="group-functional">Group Functional Training</option>
-    </select>
-  </div>
+    <div class="form-group" style="position: relative; margin-bottom: 1.5rem;">
+        <div class="phone-input-wrapper" style="position: relative;">
+            <input type="tel" id="home-phone" name="phone" required placeholder=" " pattern="[0-9]+" inputmode="numeric" 
+                   style="width: 100%; padding: 0.9rem 1rem; border: 1px solid #d1d5db; border-radius: 8px; 
+                          font-size: 1rem; font-family: inherit; background-color: #fff; z-index: 1;" />
+            <label for="home-phone" 
+                   style="position: absolute; left: 1rem; top: 0.9rem; color: #9ca3af; background-color: #fff; 
+                          padding: 0 0.25rem; margin: 0; transition: all 0.2s; pointer-events: none; z-index: 2;">
+                Phone number *
+            </label>
+        </div>
+    </div>
 
-  <div class="form-group">
-    <label for="message">Message *</label>
-    <textarea id="message" name="message" required placeholder="Tell us about your fitness goals..."></textarea>
-  </div>
+    <div class="form-group">
+        <select id="home-service" name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="personal-training">Personal Training</option>
+            <option value="online-training">Online Training</option>
+            <option value="nutrition">Nutrition Plans</option>
+            <option value="group-classes">Group Classes</option>
+            <option value="crossfit">CrossFit Training</option>
+            <option value="weightlifting">Olympic Weightlifting</option>
+            <option value="weight-loss">Weight Loss / Fat Loss</option>
+            <option value="rehabilitation">Rehabilitation & Recovery</option>
+            <option value="muscle-gain">Muscle Gain</option>
+            <option value="muscle-hypertrophy">Muscle Hypertrophy / Bodybuilding</option>
+            <option value="group-functional">Group Functional Training</option>
+        </select>
+    </div>
 
-  <!-- ✅ Anti-spam honeypot -->
-  <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+    <div class="form-group" style="position: relative; margin-bottom: 1.5rem;">
+        <textarea id="home-message" name="message" rows="4" placeholder=" " 
+                  style="width: 100%; padding: 0.9rem 1rem; border: 1px solid #d1d5db; border-radius: 8px; 
+                         font-size: 1rem; font-family: inherit; background-color: #fff; z-index: 1; resize: vertical; min-height: 120px;"></textarea>
+        <label for="home-message" 
+               style="position: absolute; left: 1rem; top: 0.9rem; color: #9ca3af; background-color: #fff; 
+                      padding: 0 0.25rem; margin: 0; transition: all 0.2s; pointer-events: none; z-index: 2;">
+            Your Message
+        </label>
+    </div>
 
+    <button type="submit" class="submit-btn" style="background-color: #84cc16; color: white; border: none; padding: 0.9rem 2.5rem; 
+           border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.2s;">
+        Get a Free Quote
+    </button>
+</form>
 
-
-  <!-- ✅ Submit Button -->
-  <button type="submit" class="submit-btn">Send Message</button>
-
-</form>         
+                
                 <script>
                 // Add this JavaScript to handle the floating labels
                 document.addEventListener('DOMContentLoaded', function() {
@@ -1354,7 +1379,7 @@ Our state of the art facility is more than just a gym. It is a space where dedic
     </section>
     <!-- Contact Form Section End -->
     <!-- Success Popup for Index -->
-    <div id="successPopupIndex" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.35);z-index:9999;align-items:center;justify-content:center;animation:fadeInPopup 0.4s;">
+ <!--   <div id="successPopupIndex" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.35);z-index:9999;align-items:center;justify-content:center;animation:fadeInPopup 0.4s;">
         <div style="background:#fff;padding:2.5rem 2rem 2rem 2rem;border-radius:22px;box-shadow:0 12px 40px rgba(132,204,22,0.22);text-align:center;max-width:90vw;position:relative;min-width:320px;">
             <div style="display:flex;justify-content:center;align-items:center;margin-bottom:1.2rem;">
                 <span style="display:inline-block;width:64px;height:64px;background:rgba(132,204,22,0.12);border-radius:50%;position:relative;">
@@ -1370,7 +1395,7 @@ Our state of the art facility is more than just a gym. It is a space where dedic
             <p style="color:#374151;font-size:1.15rem;margin-bottom:1.7rem;">Thank you for reaching out.<br>We will get back to you soon.</p>
             <button id="closePopupBtnIndex" style="background:var(--secondary-color);color:#fff;font-weight:600;padding:0.7rem 2.2rem;border-radius:30px;border:none;font-size:1.1rem;cursor:pointer;display:inline-flex;align-items:center;gap:0.7em;transition:background 0.2s,transform 0.2s;"><i class="fas fa-times"></i> Close</button>
         </div>
-    </div>
+    </div> -->
     <style>
     @keyframes fadeInPopup {
         from { opacity: 0; }
@@ -1692,56 +1717,53 @@ Our state of the art facility is more than just a gym. It is a space where dedic
                 }   
             </style>
 
-            <form action="https://api.web3forms.com/submit" method="POST" class="consultation-form">
+ <form id="consultationForm" class="consultation-form" action="https://api.web3forms.com/submit" method="POST">
 
-  <!-- ✅ Your Access Key -->
-  <input type="hidden" name="access_key" value="971e53dd-6e01-47d5-b835-4d2fa07936cd">
+    <!-- ✅ Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="971e53dd-6e01-47d5-b835-4d2fa07936cd">
 
-  <!-- ✅ Form Fields -->
-  <div class="form-group">
-    <input type="text" name="name" required placeholder=" " />
-    <label>Full name *</label>
-  </div>
+    <!-- ✅ Anti-bot field -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
 
-  <div class="form-group">
-    <input type="email" name="email" required placeholder=" " />
-    <label>Email *</label>
-  </div>
+    <div class="form-group">
+        <input type="text" id="popup-name" name="name" required placeholder=" " />
+        <label for="popup-name">Full name *</label>
+    </div>
 
-  <div class="form-group">
-    <input type="tel" name="phone" required placeholder=" " pattern="[0-9]+" inputmode="numeric" />
-    <label>Phone Number *</label>
-  </div>
+    <div class="form-group">
+        <input type="email" id="popup-email" name="email" required placeholder=" " />
+        <label for="popup-email">Email *</label>
+    </div>
 
-  <div class="form-group">
-    <select name="service" required>
-      <option value="" disabled selected>Select a service</option>
-      <option value="personal-training">Personal Training</option>
-      <option value="online-training">Online Training</option>
-      <option value="nutrition">Nutrition Plans</option>
-      <option value="group-classes">Group Classes</option>
-      <option value="crossfit">CrossFit Training</option>
-      <option value="weightlifting">Olympic Weightlifting</option>
-      <option value="weight-loss">Weight Loss / Fat Loss</option>
-      <option value="rehabilitation">Rehabilitation & Recovery</option>
-      <option value="muscle-gain">Muscle Gain</option>
-      <option value="muscle-hypertrophy">Muscle Hypertrophy / Bodybuilding</option>
-      <option value="group-functional">Group Functional Training</option>
-    </select>
-  </div>
+    <div class="form-group">
+        <input type="tel" id="popup-phone" name="phone" required placeholder=" " pattern="[0-9]+" inputmode="numeric" />
+        <label for="popup-phone">Phone Number *</label>
+    </div>
 
-  <div class="form-group">
-    <textarea name="message" rows="3" placeholder="Tell us about your fitness goals..." required></textarea>
-  </div>
+    <div class="form-group">
+        <select id="popup-service" name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="personal-training">Personal Training</option>
+            <option value="online-training">Online Training</option>
+            <option value="nutrition">Nutrition Plans</option>
+            <option value="group-classes">Group Classes</option>
+            <option value="crossfit">CrossFit Training</option>
+            <option value="weightlifting">Olympic Weightlifting</option>
+            <option value="weight-loss">Weight Loss / Fat Loss</option>
+            <option value="rehabilitation">Rehabilitation & Recovery</option>
+            <option value="muscle-gain">Muscle Gain</option>
+            <option value="muscle-hypertrophy">Muscle Hypertrophy / Bodybuilding</option>
+            <option value="group-functional">Group Functional Training</option>
+        </select>
+    </div>
 
-  <!-- ✅ Anti-bot field (Leave it empty) -->
-  <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+    <div class="form-group">
+        <textarea id="popup-message" name="message" rows="3" placeholder="Tell us about your fitness goals..." required></textarea>
+    </div>
 
-  
-
-  <!-- ✅ Submit Button -->
-  <button type="submit" class="submit-btn">Book Free Consultation</button>
+    <button type="submit" class="submit-btn">Book Free Consultation</button>
 </form>
+
 
             
             <div id="popupSuccessMessage" class="success-message" style="display: none; text-align: center; color: #10b981; font-weight: 600; margin-top: 1rem;">
